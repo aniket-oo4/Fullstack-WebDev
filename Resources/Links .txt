@@ -1,0 +1,6 @@
+You can use D3 javascript chart library for the chart.
+ 
+Here is an example: https://blog.risingstack.com/d3-js-tutorial-bar-charts-with-javascript/
+ 
+another one: https://observablehq.com/@d3/bar-line-chart
+ 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Methods</title>
+</head>
+<body>
+   
+<p id="p1"> Lorem 1</p>
+<p id="p2" class="my-class"> Lorem 2</p>
+<p id="p1"> Lorem ss 3</p>
+<p id="p4" name="hello"> Lorem 4</p>
+<p id="p5" name="hello" class="my-class"> Lorem 4</p>
+
+  <script>   
+
+
+// //1. write() // it is used to put text nodes into page
+// // dont use it we dont want to put just text we need to put it inside tags thats why it is notmore used
+// document.write("hello world ");
+
+// // 2. getElementById() //returns single element otherwise null 
+// // datatype of element is object 
+// // is is used to access the element by specified id
+// // it returns first child is there is multiple elements withs same id butusuallly not any ele had same id classes can be samebut  
+// console.log(document.getElementById("c")); //null
+// let ele=document.getElementById("p1");
+// console.log(ele,"type: ",typeof ele);
+
+
+
+//see  syntax of elements taht are explained below carfully there is get elements<-- s  By thats it returns multiple elements in the form of array 
+
+// //3 .getElementsByTagName() . it will returns  Array of elements that have same name   othewise empty array
+// let ele=document.getElementsByTagName("p") //passed tag 
+// console.log(ele); //array
+// console.log(ele[0]); //element
+//console.log(document.getElementsByTagName("h1")); //empty ray
+
+
+// //4. document.getElementsByName()   // it returns array of elements that are having samename  othewise empty array
+// let ele=document.getElementsByName("hello");
+// console.log(ele);
+// console.log(ele[1]);
+
+
+
+// //5. document.getElementsByClassName()   // it returns array of elements that are having same class name  othewise empty array
+// let ele=document.getElementsByClassName("hello"); //empty arrays
+// console.log(ele);
+// console.log(ele[1]); //undefined
+
+// ele=document.getElementsByClassName("my-class");
+// console.log(ele);
+// console.log(ele[1]); 
+
+
+// // 6. document.querySelectorAll(); 
+// // by using this method returns element by taking any type of selector  for parameter either id ,tag,class  of element or child selector etc  except name selector i think
+
+// // returns nodeList other wise empty nodeList []
+
+// let ele=document.querySelectorAll('p');
+// console.log(" P tags :",ele);  // return type is nodeList
+
+// ele=document.querySelectorAll("#p2");
+// console.log("Tags with id p2:",ele) //returnsnodelist with elements 
+
+// ele=document.querySelectorAll("hello");
+// console.log("Tags with name hello:",ele); //does not selects returns empty
+// ele=document.querySelectorAll(".my-class");
+// console.log("Tags with class my-class:",ele)
+
+
+
+// 7. document.querySelector();  //returns object (element) otherwise null object  
+// it is same as querySelectorAll  but difference is queryselectorAll() returns nodeList of multiple elements and  querySelector() returns only single element that is first occurence 
+
+// returns nodeList other wise empty nodeList []
+
+let ele=document.querySelector('p');
+console.log(" P tags :",ele  ,"Type :",typeof ele);  // return type is object s
+
+ele=document.querySelector("#p1");
+console.log("Tags with id p2:",ele) //returnsnodelist with elements 
+
+ele=document.querySelector("hello");
+console.log("Tags with name hello:",ele); //does not selects returns empty
+ele=document.querySelector(".my-class");
+console.log("Tags with class my-class:",ele)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=QspJc6JUAwfMx-SciNvnSlCgZ5cPQ_0jBOgKnS_leppSsHc79UJ0d9NVnnBWaSJIBGSt3ywFvTG-vw3Au2t1U926Tw7Iy_n1xK6Qf7kOFAfR_Rkd78ySKeJ8tHgeFKILd39eETdxpgVHVC0SHbBkHA5okDF5LADpokbgz0SPjWnYZqX8HkT87kFil9ARPmcxi2R6nxgTWAvV8DrSDZHnEtHplycxnsr3Oqp7M4hp9i-FOvkRZcFpY-TQEsZADpf_nKb2EgHyRLFRVa8YGB2Yfu8Lz7kPBu2WUzRe-eQh6NW6QFAjh-tTAQZrMpRQKLhcKcvxhvrP0k_XC33VCZRa2KxEy41FSHCRNCV5R5QlbBmjHqwCvvMDmWy_nI1VUtn5MGTeVLaCVv7o4EVhqJTIN-KDK_S0XnY_4H4IuhLrOWGRWRnAgGsDeGNcZBf9ivPKf7gxTpkuJ1nBzAeRR_ls7oEY7paDKTEosxeNwq7z-8hUcIuioF8Pqu-ktINtjCahet1JEZ3STt9T_o-QVbl_wT__ww6nOtS1Y4DEWjuegwQ8sxiSc6Asr7SykM0PDz2rHEhtmRgBVFTJCjLNEj0M3xIl2GVNG-Q28KesiECFD5vu0dQF7825eL0L4q_aCLOTQzEGpo_SaCCKl2gVGw0zEjUFiEuAfyiPgISxRZEah5_MgaIWTsrI8DgSOgVR6UbvwgsjPEGCzXrp4Ghbxk38NqwGOSc9smd9Fgt6qijzLwQvhNSY23caJh1tN9yrqxE1QsUz5iFCqGMPZGcqtK4ZNjCEkxp0DUW5Ykm4NdiAybY" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>change - dropdownlist</h4>
+    <h5>New Bank Account</h5>
+    <select id="drp1">
+      <option value="0">--Please Select--</option>
+      <option value="1">Savings account</option>
+      <option value="2">Current account</option>
+      <option value="3">Loan account</option>
+    </select>
+    <br>
+    Minimum Balance: <input type="text" id="txt1" readonly="readonly">
+    <script>
+      document.getElementById("drp1").addEventListener("change", sample1);
+      function sample1()
+      {
+        var s = document.getElementById("drp1").value;
+        if (s == 1)
+        {
+          document.getElementById("txt1").value = "5000";
+        }
+        else if (s == 2)
+        {
+          document.getElementById("txt1").value = "10000";
+        }
+        else if (s == 3)
+        {
+          document.getElementById("txt1").value = "20000";
+        }
+        else
+        {
+          document.getElementById("txt1").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--jQuery dependencies  for themes visit website for thems -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="jquery-ui-themes-1.14.0/themes/start/jquery-ui.css"
+    />
+    <!-- taken from jQuery resource -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!--PQ Grid files-->
+    <link rel="stylesheet" href="pqgrid.min.css" />
+    <link rel="stylesheet" href="pqgrid.ui.min.css" />
+
+    <!--bootstrap theme-->
+    <!-- <link rel="stylesheet" href="themes/chocolate/pqgrid.css" /> -->
+
+    <!--jsZip for zip and xlsx import/export-->
+    <script src="jsZip-2.5.0/jszip.min.js"></script>
+
+    <script src="pqgrid.min.js"></script>
+    <!--for localization and intellisense -->
+    <script src="localize/pq-localize-en.js"></script>
+
+    <!--for touch devices-->
+    <script src="pqTouch/pqtouch.min.js"></script>
+
+    <!--  script for excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <style>
+      .pq-grid {
+        font-size: 13px;
+      }
+      #grid_json {
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 10px 10px rgba(86, 90, 92, 0.297);
+      }
+      #grid_json:hover {
+        box-shadow: 10px 10px rgba(102, 148, 171, 0.297);
+      }
+      .pq-body-outer pq-focus {
+        overflow: auto;
+      }
+      body {
+        background-color: rgba(167, 203, 191, 0.753);
+      }
+    </style>
+    <script src="paramGridScript.js"></script>
+    
+  </head>
+  <body>
+    <div id="grid_json" style="margin: 100px"></div>
+  </body>
+</html>

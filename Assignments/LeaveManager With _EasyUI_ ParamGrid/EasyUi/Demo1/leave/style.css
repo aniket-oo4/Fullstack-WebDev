@@ -1,0 +1,117 @@
+/* Custom Styles */
+
+/* Global Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Card Animations */
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Input Focus Animation */
+  .form-control:focus, .form-select:focus, textarea:focus {
+    border-color: #6610f2;
+    box-shadow: 0 0 0 0.2rem rgba(102, 16, 242, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button Hover Effects */
+  .btn-success:hover, .btn-primary:hover, .btn-danger:hover, .btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Table Row Hover Effect */
+  .table-hover tbody tr:hover {
+    background-color: rgba(102, 16, 242, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Modal Animations */
+  .modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .modal.show .modal-dialog {
+    transform: translateY(0);
+  }
+  
+  /* Custom Animations using Animate.css */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+  
+  /* Example: Adding custom keyframes */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Applying custom animation */
+  #searchResult {
+    animation: slideInLeft 0.5s ease-in-out;
+  }
+
+  
+  /**/
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-body {
+    animation-duration: 0.5s;
+}
+
+.btn {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#searchResult .card {
+    margin-top: 15px;
+}
+
+#searchResult .card-body {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--jQuery dependencies-->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!--PQ Grid files-->
+    <link rel="stylesheet" href="pqgrid.min.css" />
+    <link rel="stylesheet" href="pqgrid.ui.min.css" />
+    <!--bootstrap theme-->
+    <link rel="stylesheet" href="themes/steelblue/pqgrid.css" />
+
+    <!--jsZip for zip and xlsx import/export-->
+    <script src="jsZip-2.5.0/jszip.min.js"></script>
+
+    <script src="pqgrid.min.js"></script>
+    <!--for localization and intellisense -->
+    <script src="localize/pq-localize-en.js"></script>
+
+    <!--for touch devices-->
+    <script src="pqTouch/pqtouch.min.js"></script>
+
+    <!--  script for excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+      $(function () {
+        myToken =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmlrZXQiLCJyb2xlIjoiYW5pa2V0IiwiZXhwIjoiMjAyNC0wOS0xMFQxODozODo1My42ODMyNjM0KzAwOjAwIn0.kqOpWBnQ_Y7liqP7WDNwTeKfOKb-PnHW9zwyuYtM1_c";
+
+        $.ajax({
+          type: "GET",
+          headers: { Authorization: "Bearer " + myToken },
+          url: `http://localhost:53842/api/LeaveApi?offset=0&limit=10`,
+          success: function (leaves) {
+            var data = leaves.Data;
+            console.log(data);
+            mydata = data;
+         
+         
+          }, //success closing
+        }); //ajax closing
+      }); //document load closing 
+
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

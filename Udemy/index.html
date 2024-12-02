@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const student = {
+        name: "Hari",
+        age: 12,
+        marks: 19,
+      };
+
+      function refresh(){
+        document.write(` <table border=3px>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>marks</th>    
+    </tr>
+     <tr>
+        <th>${student.name}</th>
+        <th>${student.age}</th>
+        <th>${student.marks}</th>    
+    </tr>
+    `);
+      }
+
+     // refresh();
+    </script>
+  </head>
+  <body>
+
+<input type="button" onclick="refresh()" value="displayDetails">
+<br>  
+Location ::<div id="location"> </div>
+  </body>
+  <script src="Section23_/1Classes/classes.js"></script>
+  <script>navigator.geolocation.getCurrentPosition(showPosition);
+
+function showPosition(position) {
+  var myElement=document.getElementById("location");
+  myElement.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+  </script>
+</html>

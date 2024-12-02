@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=QMkDb6yUANfS3oL3c5tc_o87UBYZXkipXDrT0NfJPpHXCDaEFYy50k8jnCMwgzrVQHcZSNvPPUqsPtG61L_AzCkLe60YjUKE50TlByiJMEhQC6YIzbvXkUEXFmceD9DWQpzNok03nVTM__NACAiVXYN0ahEeJQVHAJYRUYq9RUfzUMbe9ODcV1WRer-44ALOg47oofVYGaJjCjGfoSNg2BIBQLD4L4MEFHX_EoInJzCC0sX1HV42snVXMTxRghHCLmkSe8d7YFQzgcNrRwvJyCRE5sV0FtI2sDkkH51Y64-ypp5kwwYoa_vfrk1rwGR1yuVh74bW577laNSv9qS9w37GFeofMEeRKtnEM-_RMDXDGQsqefkOySZ8SRkLsrl6_EYn7zulk1Dvlb4gCHo5mO2-HLi6Z148-N1omPibAP7diAzLWs8h5mu5IULw9uQwJ4Ze0jWqNqkD4MccUGnSf0lejX1gcCKJtr3zCDYpdCxY0BhlG9TD2AvKNvrrKz21xC5asTKdfoJUJ7C_j5ezwyfflL1YQa7pUi6W2Gs6Wb0SIOs2qzujbtjoBiVCLEaPRlmzH-WH-N2q1Eqd2TVdFIEVvrAJRUki6ARnJwKynyVAWjCr7rfjXeD_y-hD5y7ElG_N3z05FYe-m4flHxDG7LShz-2J8qHYGm1hPQujM5mkgOTAuHyAC9dslEFwlE58LBcWuN5CsTFsrU0tGhfOODxZBsTqZ0U2HYaAYoTMeKnsS3J3t7gutGqVwqNfu5lNvls4bs63Sc2wd_okbtn_NLTDEEb0eY48Mfkyfvl7-k0" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>change - radio button</h4>
+    <h5>New Bank Account</h5>
+    <input type="radio" name="bankaccounttype" id="rb1">Savings account
+    <input type="radio" name="bankaccounttype" id="rb2">Current account
+    <input type="radio" name="bankaccounttype" id="rb3">Loan account
+    <br>
+    Minimum Balance: <input type="text" id="txt1" readonly="readonly">
+    <script>
+      document.getElementById("rb1").addEventListener("change", sample1);
+      function sample1()
+      {
+        document.getElementById("txt1").value = "5000";
+      }
+
+      document.getElementById("rb2").addEventListener("change", sample2);
+      function sample2()
+      {
+        document.getElementById("txt1").value = "10000";
+      }
+
+      document.getElementById("rb3").addEventListener("change", sample3);
+      function sample3()
+      {
+        document.getElementById("txt1").value = "20000";
+      }
+    </script>
+  </body>
+</html>
+

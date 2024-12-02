@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=moy1cTmDWpXsxxdhR7KqKeCqN2CIgn9QlhX7vWi-k1Db1ZmNQTY51s0nsOAgQl1lCHfidapo6UbqGYvwWKh-SGT6dxtS7yE_ooEnKr-wIvbDzmniYOlgh1ShBJkdtFLMw_Uu-QbcBUODuavwNZ2zIJ3Y7PgQNT7H3LRIK93fLktgbJv9bS0xnWB98IxyYgbj5YAZyy1ZB5zRRAAMbR1mBnLNk5JD_PyTWd-2wsQpUcoMcuj6EQHMCIL255Tw_f5vJzWvtyr0tWA7Sqq63L9gmbEE1WxsDEwSEY0-C3lnaoh_zdxFdlbIVtjr3082_YRqPz4JWxQDoa3bNaH1yXtPI_9wvhBiaLyWTIyHDPQbNylJNddt5reB8uEpbDpCeSMzks-ifjkrKiQ9LuFO3j3psIQf_QbnPL86zo-m8QNpQj8UhjTJmtTAbDV1d0DFBzGr7P-AndiXX__QqZwJoVlKTvSCkM9T6tEBiIofa9qyFzuMZCcacIsp_5G4WJJFLQ4e-uJSS_wPu8Zm_Xl9FVmrFphXyHXZ9-7qEDFZoZO6Uct6My-WKgzN49uaFNCmwqJD779vFkhnnaqELE3GF92Tw8Rc79Q4ZzDx_BLpoYAiGlgIHIu6G9KLpDZCayYfksTczZxYp8Mn7rIr8TtT4dvOyV0_8b8LRm2DcSOp5z2FEJqgRfpfXIz-kMOn48jUY4uoz3VymjnYhjV3Co7fse6pJFmO6HZo9EYnnXQoMckoLK6QvtUB84DzvyZNpTKDCDu7mzR5oBcCAROKUWCZj0h1VA" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>change - textbox</h4>
+    Country: <input type="text" id="txt1"><br>
+    <span id="span1"></span>
+    <script>
+      document.getElementById("txt1").addEventListener("change", sample);
+      function sample()
+      {
+        var s = "You are from " + document.getElementById("txt1").value;
+        document.getElementById("span1").innerHTML = s;
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=0d3FCxQcFsa_tPzrLSPJcm9wdYYRd75b_0uTB7TIGerG9Jcur70BtWR1qX6hJ6HWdOY6I7PFxzEhVMedEct8zoa9Bx8n4r-Ot3T1AJVoVmIeNLx4HgU8RTQsYNpCLY-k_USxrM5RfSZ4FDNj3hBk1Z1mCxIfwGAvhYR5jm8MOUjSP6QQdO6qxqrhzvng5CKQWbqobWmwbckzaCI3gL4hsUnVe8kNCpDd3-Jajauf3MHh8f6wXQrHk5tv6cdyJWFQyJsvJFw4eEbIep1s_aw62CkVA16yx-BVJbWtKU1403r_C4Zh-auCra8z0i2QsCsuqeXGxXkEvwW3GhSNMW5UBP2DFqGupo70rWAh8dGXEwxrSmOTPGzGIBUmurK3HT66LGY5Ens8te_jlnd0ZnFwcgxGxQYpF6QtU5kQYMWFMospKmWSW99_FPKfIoJyYWKjBBlUVgch9rifmBOUNDuLzYtgiWFgwSHHZIwixiRqdqjAcf33AY_3IABLLNQu2megMOgUoXC8TQUG4YUqg8xDiYTCzW2YSJIFmwm-ug7a7egWvEPsv7L672obxkWcf4i8xYoS-8P071FutCyb7ztGH9HWT7DKgLnnz-v6dkAjZszpkk8nbqn46qNJMJJSVafM_D20LmIRRw8-E4klj5jt3vKgBgZ_3Vb5DRGMNyj-8WQMnYz0zIAg99TSCId910WlZ5xRsPnH2xru7bGnr0FtR3w8bJVEUjqxwBBjbwW55ZO7N7s9APqJsYi-78e4la_2OBbafyfxpSF7q8Fx7zm1qw" charset="UTF-8"></script><style>
+      #div1
+      {
+        background-color: skyblue;
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>mousemove</h4>
+    <div id="div1">div 1</div>
+    <script>
+      document.getElementById("div1").addEventListener("mousemove", sample1);
+      function sample1(event)
+      {
+        //console.log("mousemove " + new Date().getTime());
+        console.log(event.pageX + ", " + event.pageY);
+      }
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=FYc0NfT-OL4ODi7oJ8lbdnM40YcqYDBZrbgSX7JRU1PUcuMKkqtFGI3-zDrgOn8Ks6WErbQD_ZXb65s7J54T0EC0bV6-NQr4yFcE0Usfh2_J3V208Z7rpnUGAxiHMaKlLX_ZB_z5scLMQfFmnHTxmov6EdLPdu-VRKrByBxahnoNsDNU9UppTuDXFNy5TjagGJxS9I8NKDCzfMjUdmpptax7ILVsmAbAGLSJWZooIYHWE-KDYwYyWE7ES61QLE5cAFfXhZuqNtjDn45PlqS7vTArBQukL_1iW71-Y7hKD_96AXmjcGYqHNy1VyMVp7Iw_L_XfQSmYEY3CnnhGDQjPlxGSn1MebXA6s0XN6VGXVKSFt7f5kTBmLt9P5sqgqSv4V_gQ-7RFH36qs12nePyolyXv7pdcFCiF4L9lnR7fN-lpHmKRMxsUZjkvK5Zwcvjf_pVBRBwyFKZqgZZgOFrZqPWaGmhFqSAm1fIDFHiykJ_vjDINtLpvxpq8YO0rH9dTG_N2yCQGZQemX1h-z2a17OZePFhjCXKE9l7d75CunpuIxnoMP3AJVH9k6eVvbnCOtTwLNXMB1W9ECYk4h75VwAnE10Dn19XvriYSmw2ILfxZ7DnONTYdmqUh32uNpVZgUHKNgfheS0w9779Xa63apqrc4T0mGCTWWzTj3BGyeMst1gyxDlqDNqjpobAOKZkw19kVdxsZCalYkAF_NaAoqByeuV8tvHwigDHmvFLVBVffh-Qtwwip3YjMk4GG0lE79MWnZi7aPb5cuyww9n8ow" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>change - checkbox</h4>
+    <h5>New Bank Account</h5>
+    <input type="checkbox" id="chk1">
+    <label for="chk1">Cheque book facility</label><br>
+    Minimum Balance: <input type="text" id="txt1" readonly="readonly">
+    <script>
+      document.getElementById("chk1").addEventListener("change", sample);
+      function sample()
+      {
+        var a = document.getElementById("chk1").checked;
+        if (a == true)
+        {
+          document.getElementById("txt1").value = "5000";
+        }
+        else
+        {
+          document.getElementById("txt1").value = "1000";
+        }
+      }
+    </script>
+  </body>
+</html>
+

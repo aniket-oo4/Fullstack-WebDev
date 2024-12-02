@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/Styles.css" rel="stylesheet">
+    <style>
+        .container {
+            border: 4px solid red;
+            margin: 4px;
+        }
+
+        .city {
+            border: 3px dotted blue;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .season {
+            margin: 8px;
+            border: 3px inset violet;
+            /* font-weight: lighter; */
+            text-align: justify;
+            padding: 5px;
+            width: 30%;
+            height: 300px;
+            overflow: auto;
+            float: left;
+            min-width: 400px;
+            max-width: 450px;
+        }
+
+        .cityheading {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2vw;
+            text-decoration: underline #ff0000 wavy;
+        }
+
+        .seasonheading {
+            font-family: cursive;
+            font-size: 160%;
+            font-style: italic;
+            color: #132c9e;
+        }
+
+        h1 {
+            /* font: italic small-caps bold 40px 'Arial Black'; */
+            font: 40px 'Arial Black';
+            color: rgba(22, 150, 60, 0.3);
+        }
+
+        h4 {
+            text-transform: capitalize;
+        }
+
+        .seasonpara {
+            /* text-indent: 20%; */
+            /* letter-spacing: -3px; */
+            /* line-height: 1.7; */
+            /* word-spacing: 30px;
+            text-shadow: 1px 1px 2px #000000;
+            white-space: pre; */
+            /* direction: rtl;
+            unicode-bidi: bidi-override; */
+            word-wrap: break-word;
+        }
+
+        .temp {
+            font-weight: bolder;
+            color: #23b152;
+        }
+
+        #populardestinations {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar starts here -->
+    <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="states.html">States</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="capitals.html">Capitals</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar ends here -->
+
+    <h1>Welcome to India Tourism</h1>
+    <a href="#indianclimate">Go to Indian Climate</a>
+    <a href="files/Sample.pdf" target="myiframe">Click here to open PDF file</a>
+
+    <div id="populardestinations" class="container">
+        <h2>Popular Destinations</h2>
+
+        <div id="goa" class="city">
+            <h3 class="cityheading"><span class="material-icons">location_city</span> GOA</h3>
+            <h4>Things to do</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+
+            <h4>Day Plans</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+        </div>
+
+        <div id="kochi" class="city">
+            <h3 class="cityheading"><span class="material-icons">location_city</span> KOCHI</h3>
+            <h4>Things to do</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+
+            <h4>Day Plans</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+        </div>
+
+        <div id="varanasi" class="city">
+            <h3 class="cityheading"><span class="material-icons">location_city</span> VARANASI</h3>
+            <h4>Things to do</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+
+            <h4>Day Plans</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+        </div>
+
+        <div id="srinagar" class="city">
+            <h3 class="cityheading"><span class="material-icons">location_city</span> SRI NAGAR</h3>
+            <h4>Things to do</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+
+            <h4>Day Plans</h4>
+            <h5>First one</h5>
+            <p>About first one</p>
+            <h5>Second one</h5>
+            <p>About second one</p>
+        </div>
+    </div>
+
+
+    <iframe src="states.html" width="600px" height="350px" name="myiframe" frameborder="0"></iframe>
+
+    <div id="indianclimate" class="container">
+
+        <h2>Indian Climate</h2>
+
+        <div id="summer" class="season">
+            <h3 class="seasonheading"><span class="fa fa-sun"></span> Summer</h3>
+            <p class="seasonpara">During the three months from April to June it is summer in most parts of India. Generally in the month of April, many parts of India experiences high <span class="temp">temperature</span>. The normal <span class="temp">temperature</span> recorded
+                in this time in generally 30°C. But at some places in the plateau region the <span class="temp">temperature</span> rises to 40°C and in the Himalayan mountain region, it remains near about 20°C. During the three months from April to June
+                it is summer in most parts of India. Generally in the month of April, many parts of India experiences high <span class="temp">temperature</span>. The normal <span class="temp">temperature</span> recorded in this time in generally 30°C.
+                But at some places in the plateau region the <span class="temp">temperature</span> rises to 40°C and in the Himalayan mountain region, it remains near about 20°C. During the three months from April to June it is summer in most parts of
+                India. Generally in the month of April, many parts of India experiences high <span class="temp">temperature</span>. The normal <span class="temp">temperature</span> recorded in this time in generally 30°C. But at some places in the plateau
+                region the <span class="temp">temperature</span> rises to 40°C and in the Himalayan mountain region, it remains near about 20°C.</p>
+        </div>
+
+        <div id="winter" class="season">
+            <h3 class="seasonheading"><span class="fa fa-cloud"></span> Winter</h3>
+            <p class="seasonpara">During the period from December to February there is winter season in India. During this time clouds and dry North-East Monsoon passes over different regions of India and temperature is decreased considerably. In Himalayan area the temperature
+                is much lower (between 5°C and 10°C). But sometimes cyclone (coming from the West) causes storm and rainfall which is known as Western disturbance. During the period from December to February there is winter season in India. During this
+                time clouds and dry North-East Monsoon passes over different regions of India and temperature is decreased considerably. In Himalayan area the temperature is much lower (between 5°C and 10°C). But sometimes cyclone (coming from the West)
+                causes storm and rainfall which is known as Western disturbance. During the period from December to February there is winter season in India. During this time clouds and dry North-East Monsoon passes over different regions of India and
+                temperature is decreased considerably. In Himalayan area the temperature is much lower (between 5°C and 10°C). But sometimes cyclone (coming from the West) causes storm and rainfall which is known as Western disturbance.</p>
+        </div>
+
+        <div id="rainy" class="season">
+            <h3 class="seasonheading"><span class="fa fa-cloud-rain"></span> Rainy</h3>
+            <p class="seasonpara">The rainy season in India begins generally from the second week of July and continues up to the second week of October. From the second week of June humid monsoon enters various parts of India and causes rainfall everywhere in the state. The
+                rainy season in India begins generally from the second week of July and continues up to the second week of October. From the second week of June humid monsoon enters various parts of India and causes rainfall everywhere in the state. The
+                rainy season in India begins generally from the second week of July and continues up to the second week of October. From the second week of June humid monsoon enters various parts of India and causes rainfall everywhere in the state.</p>
+        </div>
+
+        <div id="spring" class="season">
+            <h3 class="seasonheading"><span class="fa fa-cloud-sun"></span> Spring</h3>
+            <p class="seasonpara">The advent of spring brings us the pleasant sound wind begins to blow. It refreshes our body and mind. The countryside appears to be adorned with green leaves and flowers. Birds sing and bees hum in the flower garden. Trees and creepers are
+                covered with beautiful flowers. Bees hum all day long among them. The advent of spring brings us the pleasant sound wind begins to blow. It refreshes our body and mind. The countryside appears to be adorned with green leaves and flowers.
+                Birds sing and bees hum in the flower garden. Trees and creepers are covered with beautiful flowers. Bees hum all day long among them. The advent of spring brings us the pleasant sound wind begins to blow. It refreshes our body and mind.
+                The countryside appears to be adorned with green leaves and flowers. Birds sing and bees hum in the flower garden. Trees and creepers are covered with beautiful flowers. Bees hum all day long among them.</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

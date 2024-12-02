@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=efmrEUPGASKyBqFs3vbEspR-6FWj0aEhnXHCJ25iidYyl2vm7JoOHxoN5EJ4TIdHr5m7leIHJLzuV1j70F2S3BxOsCWIpzrHP7Qaha4jefGP7R2kpw8mf9toCBXewYjWcR1EiHjyRSKqW2PCoXt8bqWzi76De0pvDXwJHh1VCx3pm587VgPex854biXsISqAeXkTCdsXW2nfV3M_DQksbGLMfZD9ywt24F43ACHYHH74YgnE4R_gn6nXe4UccO53vmi1jZAFfcrNtCL6BYbEiSosAPQ878Ut5UxZgAstPabWaHCFIj-GK1Y-cYmEbH5ua4CTPX0MHo0aYCnNyk5YUtSZ0jmnah20NGwmtWWFn0v3MetRtywBOcwYEtG7KbOK3FQUBnACNsyR76FYIPSAYDzRvhhCEPflxa94k4YAMlM8k1ZrnZDLm3z31M1soAJHYZH-gMzIgUfi-SYNt1r-76MtqbYbHh77ABP7coRIzqZgurgEmCabY59jzdT0_BC6VsT32nybJIz3jkDKpB9_hgOQf3OcxIjGoKAVlWFlf5gY8JPhk70t20MmXejjmoLVZgCezzkd2E9qLUumRclh5aXQ4xCz7WHIz7-NN9ILvkKHGsajnYUAqWDsuR9HliS_QWEj3m0_6kxW39ymJoKcW-IDo310nAmw4kNMkTYTVDSkuhSXEYDmgsbD3ALUyKe5i97Uoapok-umQ-yFymBswI2mk8k__3EMbt1wYOfFfNfoMCj8h45L0L0HFKouiFPeN0HRq9XPNgODhFDk5R1vTwAqPy-cdCg4l8WvhcTGacY" charset="UTF-8"></script></head>
+  <body>
+    <h4>Constructor Function</h4>
+    <script>
+      function Student(a, b, c)
+      {
+        this.studentid = a;
+        this.studentname = b;
+        this.marks = c;
+
+        this.result = function()
+        {
+          if (this.marks >= 35)
+          {
+            return "Pass";
+          }
+          else
+          {
+            return "Fail";
+          }
+        };
+      }
+
+      var s = new Student(101, "Scott", 80);
+      s.email = "scott@gmail.com";
+      console.log(s);
+      console.log(s.studentid);
+      console.log(s.studentname);
+      console.log(s.marks);
+      console.log(s.result());
+
+      var s2 = new Student(102, "Smith", 25);
+      console.log(s2);
+      console.log(s2.studentid);
+      console.log(s2.studentname);
+      console.log(s2.marks);
+      console.log(s2.result());
+
+      var k = Object.keys(s);
+      console.log(k);
+      for (var i = 0; i < k.length; i++)
+      {
+        console.log(s[k[i]]);
+      }
+    </script>
+  </body>
+</html>
+

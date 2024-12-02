@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=KFyLbj-VPWDQRmhyNg7kpiZcosQ-7PkSUppkeOxAGROgeT1O51N5i9CgtLuMATIZ8oJoiI_ALhrU6lDRPO_XXfM22haExxNcFdTegmkJ33iURYGTCwuZdguj-qyIC4Vwu2b9kvD04obfnJVJvF83tt_xdu_ycBtaT-YTouNg65DS517svBqa4SntSAXGC8ohXPww9Tau3Jw0aYRGPjFgoQXN1x3H1HPCmqe_Kvk4v57Z5IewQkR0eape12MJ7aa7nFNrD2IQ3cfNYDa9Ass4KXh5fGnaioKhQO_4Hv0FAod7cVNVEv5uxoHdCt3VihkpzPcZ_1mnWl_0jQF_aWwum3-5Ye87QY1u4R1NCE7HHlUJv0IDEw7NVnEoCft7wSbnZPs7uCFlAHKmnpNrg_i0O454cNbvwFfkoxLddAcaScOx_wwxRLC5QO1Ee2wupcQ0WXJ2pVxE_Yr3yuFK8bEh0UoXD5wuAlaOs_c32B1DXLZvt1aMPC92UGjMxP26t4JlOaAYbxIPeamOk0T1TF4RnfXs3IeSwifI3iOtbbYC3CgPksPLdApFD8_VzRWtmUIa1fYO4mUjplv36ef_cjFnGfwNZ55QVJ2tWwAV8DUfgWNWcSew6DV1-sLUZMSmFaQBLCBMQpIRB2fc3h7pR9MkXz93U2CyGyZ_92zKmhrMIwtn4Ju4GZtbWpZIYo7n8ehzEq2hkTAx2baAWhCpjrxFg52j861b5s9xPKKqU3o7sorcejywlEoip5PDvHC7kR0GhJyyiDHaX_UEiHEj3WgL2Q" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>contextmenu</h4>
+    <p id="p1">para 1</p>
+    <script>
+      document.addEventListener("contextmenu", sample);
+      function sample(event)
+      {
+        event.preventDefault();
+        alert("right click not allowed");
+        console.log("contextmenu " + new Date().toLocaleTimeString());
+      }
+    </script>
+  </body>
+</html>
+

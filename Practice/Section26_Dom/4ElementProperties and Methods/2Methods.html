@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Methods </title>
+</head>
+<body>
+    
+
+<!-- <img id="my-image" width="500px" src="img2.jpg" title="IMG" alt="not found ">  remove comments for testing  -->
+
+<!-- <h4>focus example</h4>
+<input type="text" id="txt1">
+<input type="text" id="txt2">
+<input type="text" id="txt3">
+<input type="text" id="txt4"> -->
+
+
+<h4> clcik example</h4>
+<form action="#" id="form1">
+Firsname:<input type="text" name="fname"><br>
+Lastname:<input type="text" name="lname"><br>
+<input type="submit" id="btn">
+</form>
+
+
+<div id="div1">
+<p id="p1">hello</p>
+<p id="p2">afas</p>
+<p id="p3">asds</p>
+</div>
+
+<script>
+/*
+Methods:
+9.setAttribute()
+10.getAttribute()
+11.removeAttribute()
+12.attributes -property
+13.hasAttribute()
+14.focus()
+15.click()
+16.remove()
+17.appendChild()
+18.addEventListener()
+19.document.createElement()
+
+these are the set of predefined methods of elements of html
+that are applicable to all types of tags in html 
+*/
+
+// //1. setAttribute()  : this method is used to set an  attribute to  html tag  dynamically 
+// //   syntax  = element.setAttribute("attribute","value");
+// //setting src to imag tag 
+// let ele=document.getElementById("my-image");
+// ele.setAttribute("src","img1.jpg"); //return type is undefined
+// ele.setAttribute("width","600"); //width 
+
+
+// //2.getAttribute(): used to retrieves the current value of attribute 
+// //syntax : element.getAttribute("attribute"); //return value
+// console.log(ele.getAttribute("height")); // returns null if not have such attribute 
+// console.log(ele.getAttribute("src"));
+
+
+// //3.removeAttribute() : used to remove specified attribute of tag 
+// console.log(ele.removeAttribute("width")); // returns type is undefined \
+// // it removes the width attribute from element 
+
+
+// //4. attributes : thisis a property that returns NamedNodeMap of all the attributes of that tag   
+//   // properties of nodeList =length name:value 
+// let attributesOfImg=ele.attributes;
+// console.log(attributesOfImg) //NamedNodeMap {0: id, 1: src, 2: width, id: id, src: src, width: width, length: 3}
+// console.log(attributesOfImg[2]);
+// console.log(attributesOfImg.length);//lenth of attributes 
+// for(let i=0;i<attributesOfImg.length;i++){
+// console.log(attributesOfImg[i]);
+// }
+
+// for(let i=0;i<attributesOfImg.length;i++){
+// console.log(attributesOfImg[i].name);
+// console.log(attributesOfImg[i].value);
+// }
+
+
+
+// //5.hasAttribute(): check whether tag having specified attribute or not
+// //styntax  : element.hasAttribute("attribute")
+// //returns true or false . 
+// let ele=document.getElementById("my-image") ;
+// console.log(ele.attributes);
+// console.log(ele.hasAttribute("height"))//false
+// console.log(ele.hasAttribute("title")) //true
+
+
+// //6. focus() :
+  //syntax: formElement.focus
+//  // it is only applicable to form elements
+//  // it is used to place the cursor inside form element (textBox,checkbox,radiobutton,dropdownlist,etc). but not for any other tags than form tags 
+//  let txtBox=document.getElementById("txt2");
+//  txtBox.focus();  //try by refreshing the page 
+
+
+// //7.click() : it isused to click the form elements programmatically 
+// //element.click()
+// let btn=document.getElementById("btn");
+// // btn.click();
+// setTimeout(clickMybtn, 3000);
+// function clickMybtn(){
+//     let btn=document.getElementById("btn");
+//     btn.click();
+//     console.log("clicked");
+// }
+
+
+// //8. remove():
+// // it is used to remove the current element 
+// //element.remove();
+
+// let ele=document.getElementsByTagName("form");
+// console.log(ele[0]); 
+// ele[0].remove();
+// console.log(ele[0])//undefined 
+// console.log(document.getElementsByTagName("form")); //empty HTMCOllection[]
+
+
+//9. document.createElement() & element.appendChild()
+// createElemnt() is method of document object which is used to create an new element (html tag )  ie new instance of tag .
+// syntax: document.createElement("tagName")
+// element.appendChild("newTag") :is used to add the child element to inside existing tag  
+// it adds element after lastElement child
+let ele=document.getElementById("form1");
+console.log(ele.firstChild);
+console.log(ele.firstElementChild);
+console.log(ele.lastChild);
+console.log(ele.lastElementChild);
+
+let newPara=document.createElement("p");
+newPara.innerHTML+="kas kay challay ";
+newPara.setAttribute("style","color:red");
+document.getElementById("div1").appendChild(newPara)
+
+document.getElementById("div1").appendChild(document.getElementById("form1")) //moved above element inside that div 
+
+
+//10. insertBefore() :it used to add new element before the specified elemen
+// syntax  
+//    element.insertBefore(elementTOInsert,BeforeWhichElement);
+document.getElementById("div1").insertBefore(document.getElementById("form1"),document.getElementById("p3"));
+
+//11 insertAfter().
+//12 prependChild().
+</script>
+</body>
+</html>

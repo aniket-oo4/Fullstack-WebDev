@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=ykM3pT1VMEhpiOf8-ZneTBXz1IGeLAex567Lv-BpE6l7xijwJoaNBYhpfOeH4Ff-HECzBGHAdanpGN8RE_E5EDigNXkijZtUZCTruI9EU2ILqAELe-KQFBXc-3-9o3UMMR0CjkCky3FChWPCiYzixDgl2yg8rm-EaZBptDMR7yzTNp7Hma0WvJudnCnoOeVbY51gaEpK-ZjHxUqL-6lNlU55TppA4QzR2PJnrKtCtcVDinna7Ep7J3f9KbkP3bd1Q9aG2nL3RsxKz8ZH76TSBwqoQsqRKYmbIq4-_TgKVJUxdXJOxPQHtc9smcu6jQiDl_l0Zp6Z1Iww0KATwGNGbtwR77ZIVkRx0C7qJe2L-F_c-dxPutZTsStC82QhHIH_zaQeR7rj2liDgI_4J6LGYvZ0TxXw6zaKSIjdnAF_IS9xOpccVn3X6slfP_tPt3es-8aBvCmxfRarPzlqEUrdhiKT45lNJyHHjEnYEuvHijgtf91n5RkKQgWQodeeTm-S76khzMH7fgAx8HSExePbnKLVEQZguARb2EIx_DR4apn4UUNK1ihd_90d6QC-QSUNzuRpF6TAptgQWwZh2pcLmv2cbswzMpJO5O0L7EDHoS_Hu3vmSinwRSdAodVK1uWvjB4xOLdISTjg0bZzK3chCdKF6zc-WYAZyg5HHEGd3Q666AcOyBo_oY-a5mryljAjEy4clxv5BCXcnP89yrqNXCJpid1QOzc7g6K6N3CszRiMTSs-8NAqyA3dTF2B050rdHXy_G0VQOeQunmwMkQYPg" charset="UTF-8"></script><style>
+      #div1
+      {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>click</h4>
+    <div id="div1">div 1</div>
+    <script>
+      document.getElementById("div1").addEventListener("click", sample);
+      document.getElementById("div1").addEventListener("click", sample2);
+      function sample()
+      {
+        document.getElementById("div1").innerHTML = "clicked 1 at " + new Date().toLocaleTimeString();
+      }
+      function sample2()
+      {
+        document.getElementById("div1").innerHTML += " clicked 2 at " + new Date().toLocaleTimeString();
+      }
+    </script>
+  </body>
+</html>
+
+

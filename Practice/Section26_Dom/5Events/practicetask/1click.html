@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      price:<input type="text" id="txtPrice" /><br />
+      Tax:<input type="text" id="txtTax" /><br />
+      <input type="button" id="btnCalculate" value="CalulateNetprice " />
+      Net Prce: <input type="text" id="txtNetPrice" /><br />
+    </form>
+
+    <script>
+     let btn= document.getElementById("btnCalculate");
+     console.log(btn);
+     btn.addEventListener("click",sample);
+
+      function sample() {
+        let price = parseInt(document.getElementById("txtPrice").value);
+        let tax=  Number(document.getElementById("txtTax").value);
+      price=price+tax;
+      console.log(price);
+      document.getElementById("txtNetPrice").value=price;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=hPrx4cQuEirJnt2XXlJ3Qy1zaYcr0gaSsFd4J8hBSFJiqekDvHVca4ztGzUxswyiNUtPmk5KQxH12xdQah8oUiGPRLLrBFRg2QpC6uLY10f3xrQUKxRBbHLb2tCrYNsR_1N1BO53ZFWFukc8gmg-ZufGOM-gigJJ_F7T1LgIswWZyjKIpb44FfLma9y2aPuWGi3lqcsCX7pdmVpOr3Z58v77oufJHbCtuud213_w6FUJljSMVm1lSVREYM64c7j_ZwymSKWq3hjBwOXnWjQlb8Pg3NZgzm3Vpq7SmIaGB0w6LzG1Ug70XGUz25TmVaPKuItznB1F6OEwTeClamvn65JzW180B0Hc312-xUZGg8ImD0gh1pA7AzcriiFj4vy0xip9p5bCGOlfX_oRv_q9FqNSHs2wWvjpWLhV_akrCMoVxokuBzQRDyIeeaT8hINOllzBIuXZgj-Chc9DRzFxvXo2HkFYcIpxhTvi3I9C7pfGtDaNlg8yfMG0XAqQCj0ayoSeotJf6cn8IrIXkgP2YEWQd6zvIyNXwKz93ddjdJyJrjP5ttzm2ABQur69VcMJdhOpxvGfzRQg6cSttu6rNZSCfLyMrc4fhuy0nn2WYJ-vopMlv84ZI3izZLlVL9E0SrziBC09_g4Q3UavjhneITu9zYWkWs7LiXBrLT0qKwLSAwaKB8_Ptr6vmv67g8AonIOzlIDEAlsoyx4Ir4d4Q_22309XJDva8H3PqSrymzQbDvPk0KbAYBSUrnlM_u1Qxowofz1-YoydqZo3B9UqeA" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>keyup 2</h4>
+    Price: <input type="text" id="txt1"><br>
+    Discount: <input type="text" id="txt2" disabled="disabled"><br>
+    <script>
+      document.getElementById("txt1").addEventListener("keyup", sample);
+      function sample()
+      {
+        var price = Number( document.getElementById("txt1").value );
+        var discount = price * 10 / 100;
+        document.getElementById("txt2").value = discount;
+      }
+    </script>
+  </body>
+</html>
+
+

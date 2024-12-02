@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=XqLwjwInTHtgLZOmSjmTkvs06_l7o5qDUe5N-TzVrDskyxAUwjqnUtc37_RXM-KotQaLz5XRios7GGjXAnY-httjsTLLJtgNuk_OkbS3Ptwfal_l4gdBIusCRDIN9mi9YaAnZ_3kqnF7JswVtXId5_qczhaK_TdzvG9KSrOlkpwGWgROUmmMxtgP03V3i1hCo_tsnnsTIsoJ68o7XZOmEE6xKkJQir9GrPO5hLkMjam3lJPMwlD3Rruq5Gv6dbsVq9Tf6HhWAK0c8R_EnFnRT8pMTzBaOjhp6GwqPxgIMh0_eqZAjHfMkmb0y-n4jU6ql3Lw2TPsJ8bbFb36--L22DxDj1At_baoF6562VcFoh9Bn8FxnGIGfuLjAWvV_GgWa6OJLS6zGYyp89BRb9PHCSEVvHHHDJAe1pfVIk42XWC0YtEWWDv1wFJMBieV16mewbVmec25taWZOoionJFAWaF7M62AJH_JI3sgyFVecnzTaRvGJH4-eLOymYIDfmxpx9hjlLKBPl-3xWo8LtOidA0jFEy8zeYheG-_Ll8YmRtCWPhqjIKsi_92XRRPZI4bI0kcif1c8EHZSaYmKnhWjKv25r6mWKRr2V0uNeAWizSxI6fs_glKvxVNBeSEt_cwtn_R6ik_W9cGOg3AElqvs_QoK9IlczqhTZ-8Z8ySSIJy1zWsYM7FoFaryj3joIs72rhY9JIn0ctGw7Yo2bd-jsVuDZgYMyhQPNBU8GD_F8icK4ogQ09j5h2e3okd93zRww3aXpUowQTdIRZ1e84QQw" charset="UTF-8"></script><style>
+      #span1
+      {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>focus and blur</h4>
+    email: <input type="text" id="txt1">
+    <span id="span1">Use gmail only</span>
+    <script>
+      document.getElementById("txt1").addEventListener("focus", sample1);
+      function sample1()
+      {
+        document.getElementById("span1").style.display = "inline";
+      }
+
+      document.getElementById("txt1").addEventListener("blur", sample2);
+      function sample2()
+      {
+        document.getElementById("span1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
+

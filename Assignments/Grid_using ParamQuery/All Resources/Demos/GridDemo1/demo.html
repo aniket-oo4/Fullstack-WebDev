@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParamQuery Grid Example</title>
+    <!-- Include ParamQuery CSS -->
+    <link rel="stylesheet" href="pqgrid.min.css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include ParamQuery JS -->
+    <script src="pqgrid.min.js"></script>
+</head>
+<body>
+    <div id="grid"></div>
+
+    <script>
+        $(function () {
+            $("#grid").pqGrid({
+                width: "100%",
+                height: 400,
+                title: "Sample ParamQuery Grid",
+                colModel: [
+                    { title: "ID", width: 50, dataIndx: "id" },
+                    { title: "Name", width: 150, dataIndx: "name" },
+                    { title: "Age", width: 100, dataIndx: "age" },
+                    { title: "Country", width: 150, dataIndx: "country" }
+                ],
+                dataModel: {
+                    data: [
+                        { id: 1, name: "John Doe", age: 30, country: "USA" },
+                        { id: 2, name: "Jane Smith", age: 25, country: "Canada" },
+                        { id: 3, name: "Sam Brown", age: 40, country: "UK" }
+                    ]
+                }
+            });
+        });
+    </script>
+</body>
+</html>

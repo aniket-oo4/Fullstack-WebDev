@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=UMeyxl1lLK8qzWb-Ol9T57fa6tNykhUtZxNW5haslYOGMl2z2dDSqTKfsdSJAbYyYK9vTOmxlhURG6OzAMUs78IcmoIuHul_4_J8mumILTTBOxHOICijfZVUoidU5zUnLmzAOk0-nK7RP9Se-9odAlE5WiTV9vgkpjHXu6xLwQPWaY7AXbmG-rRPJ3JBQnADxJ8u3d8rNTiereEyy4aY51rfRGaLxIBjhekrprA9tIw_h6TF051UMo01Fhwku33eODEy47Z8yFQMNkbA_YMT-HkQyYNO09rmHZDgaInZDxkmCBpzriBq-xs_1eEaP5jpft7XBV73BlW0YlcfP7TFJP5XShAT3Zxf98mocJNerAvRQ-CN5XJ3gAP1IH4jEX7kmThJoTEmsoiLNRXvapo8nRbIP8TrV2Mg2f_1L7nOvVZnvfONA_hHSWPwr60adGtBc4kH8WxDEZxfq6T7zQcYikkzziQHXKe4UbidufRQqAP0yj94DkbNptGhwzD0RgijpZkHoLjahZPTY-BH2kKT1Yy8UC9p_BJcBxFHuAdEMEr7eEi0z4c9BLeynOatjryxvmIzDeN4KdSuezNNX6Zd9KFmpleQYDc_jrtBfWSrD2AyZjjGXGp9DogloCy7zs_YCJLCBy7vtk1QXsal6InEjhgC6ZKe47hbnSUgTEkqy3i2VkVHBRuJuUgsbII-oGbiPkwZoIcFl7Xgv3nFrkqmToLZKnczHhBNwTKs0vxjeqJm7RHqPUnNuQKPsQHRQkifmb-015eQ2q7CG5Cttnp5EQ" charset="UTF-8"></script></head>
+  <body>
+    <h4>tagName</h4>
+    <p id="p1">para <span>span 1</span> <b>bold</b> 1</p>
+    <p id="p2">March</p>
+    <p id="p3">para 3</p>
+    <p class="class1" id="p4">para 4</p>
+    <p class="class1">para 5</p>
+    <p>para 6</p>
+    <script>
+      console.log( document.getElementById("p1").tagName );
+      console.log( document.getElementById("p1").id );
+      console.log( document.getElementById("p1").innerHTML );
+      console.log( document.getElementById("p1").innerText );
+      document.getElementById("p2").innerHTML = "April";
+
+      var mycolors = [ "lightgreen", "lightblue", "pink" ];
+      document.getElementById("p2").style.backgroundColor = mycolors[0];
+      document.getElementById("p3").style.backgroundColor = mycolors[1];
+      document.getElementById("p4").style.backgroundColor = mycolors[2];
+      document.getElementById("p4").style.fontSize = 30;
+    </script>
+  </body>
+</html>
+
+

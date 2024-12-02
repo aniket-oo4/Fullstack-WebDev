@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        margin: 2px;
+        cursor: pointer;
+      }
+      .class1 {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>click - realtime task 2</h4>
+    <img id="1" src="book1.jpg" width="70px" />
+    <img src="book2.jpg" width="70px" />
+    <img src="book3.jpg" width="70px" />
+    <img src="book4.jpg" width="70px" />
+    <img src="book5.jpg" width="70px" />
+    <br />
+    <input type="button" value="Buy Now" id="button1" />
+    
+
+    <br>
+    <table border="1" id="table">
+        <tr>
+            <th>Sr.No</th>
+            <th>title</th>
+            <th>Price</th>
+        </tr>
+        
+        Total Price:<span id="span1"></span>
+    </table>
+    <script>
+      var allBooks = [
+        { bokImage: "book1.jpg",title:"Silver Lighth 2 in C# ", price: 10 },
+        { bokImage: "book2.jpg",title:"linQ in Action", price: 120 },
+        { bokImage: "book3.jpg",title:"Microsoft SilverLight 3", price: 444 },
+        { bokImage: "book4.jpg",title:" .NET 3.5", price: 322 },
+        { bokImage: "book5.jpg",title:" Silver Light 2 ", price: 895 },
+      ];
+      var selectedBooks = [];
+      let images = document.getElementsByTagName("img"); //returns html collection
+      let arr = Array.from(images); // converts any iterable data into an array datatype
+      arr.forEach((img) => img.addEventListener("click", sample));
+      
+      // adding border 
+      function sample(event) {
+        if(event.target.getAttribute("class")=="class1")
+            {
+                // event.target.removeAttribute("class"); // or also do like 
+                event.target.setAttribute("class", "");
+            }
+            else{
+                event.target.setAttribute("class", "class1");
+            }
+            
+      }
+      //----------------------------------------
+      document.getElementById("button1").addEventListener("click", sample2);
+     
+      function sample2(event) {
+        console.clear();
+        var totalPrice=0;
+        var selectedBookTags = document.getElementsByClassName("class1"); 
+        selectedBooks=[];
+        let table =Array.from (document.getElementsByTagName("td"));
+        console.log("table",table);
+        table.forEach(ele=>ele.remove());
+        console.log(selectedBookTags);       
+        for(let i=0,n=0;i<selectedBookTags.length;i++){
+            var currentImgSrc=selectedBookTags[i].getAttribute("src");    
+            let book=allBooks.find((img)=>{return img.bokImage==currentImgSrc});
+            if(book){               
+                totalPrice+=book.price;     
+             selectedBooks.push({slno:n,title:book.title,price:book.price})  ;
+             n++;      
+            }
+        }
+        
+        console.log("Total :",totalPrice,"\n Selected books :",selectedBooks);
+        selectedBooks.forEach(book=>{
+            let tableRow=document.createElement("tr");
+            tableRow.innerHTML=`<td>${book.slno}</td>
+            <td>${book.title}</td>
+            <td>${book.price}</td>`
+            document.getElementById("table").appendChild(tableRow)
+        });
+        document.getElementById("span1").innerText=totalPrice;
+      }
+    </script>
+  </body>
+</html>

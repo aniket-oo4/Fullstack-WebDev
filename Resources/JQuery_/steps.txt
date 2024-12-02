@@ -1,0 +1,20 @@
+
+
+how to add 
+<script src="your path for this file /jquery-3.3.1.js"></script>
+or online  
+		 <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+jquery-3.7.1.min.js::
+
+	minified jquery == without any space line break compressed jquery file size i 88kb nonunder standable
+	//use for eployment on server
+
+
+jquery-3.7.1.js
+	non compressed  == with spaces line break easy to understand  use for development 
+	// size - 160 kb 
+	

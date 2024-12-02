@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=2tQvlhNE12N4nogEPkWZQbPZcqN0eLdTQ08nC7cwtrkrtczumFpqCMHlhw19IA4VgkXFcTTwVLEB7DGmAPbsz21ZNhCnscQ7329ieYYU1qvCmCIw9C1ANaEk8AV9y_V0AxZL0WCK251K2II6VLC5enHZeVqr6BYGYvVZ85qm33goWZZ_ml6oiKfk5J_mAEsQgATqsfT_DoinT84E1uLrm3TifY9U3A_0TeVUJihTpqD-7t-Za95HPLThE9g9jRvcgNfTX_1jknUj1CXv6yMMGXsfFJ7z_yTX5E3_zgq38fgyKM4LqlbzW7Bjm3oEZUao52lxM9euUUMKxHiHq9Fd7FdKM6hOYLABOIRj9nizS5g_zKvEXHsPyfXmIfUTMgYrB33LO76ZjY5ic9nU7CLvg3nSoL4lnnuH1phxMdYGBOck2sNX6e2mzwlaZ6MXDye0BP_r6-0nv6CazVRuyfzEa92Lzqbp1sc4ECN7GATC-9n-4afGsJRY7fEY6jBgz0LR218DPyECBREh0aKa-o3gegLkrhnz044brcxL5AenqsIWk2F6LT2GphOh7R1O9_gk8CMy2Azmeo8gFDXpfzgnM-hF3Oyjbasdx42SV5tQIFMXTRCodRzVfGMiRt0qgZWvKwB-2PBXnMJUuZEPNk2OdG30Cl5NlH6jyreOdAXEAP-75NFAlp4mPlPSK42_hekHHwFYyVDIbZRsj9xeSdPD6KtsQScO3IMc3KeBD7pONi1tsg0OPKwVa7-6fv0-yMNG9gs-iWJBHNmTFuMbtoVFJA" charset="UTF-8"></script><style>
+      #div1
+      {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>dblclick</h4>
+    <div id="div1">div 1</div>
+    <script>
+      document.getElementById("div1").addEventListener("dblclick", sample);
+      function sample()
+      {
+        document.getElementById("div1").innerHTML = "dblclicked 1 at " + new Date().toLocaleTimeString();
+        document.getElementById("div1").style.backgroundColor = "lightgreen";
+      }
+    </script>
+  </body>
+</html>
+
+

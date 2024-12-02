@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=vBNEF6Cgs09qmfgT29xcU3oy7TI31q-awR7THo2F1BL70HoIieaQaxcEaioBaWcxKqKhkL8A3nQ1Chbq7RhgGZdGaXBAQAWNAIKqjo4xsz_i5cNo4xIu-mIK4ScjUJch8kJQqnOXZFsjbKuwehsWISXZKMxtc_HoTESlNsI6qkZ3NmbaZ2OXP56-EoEPVACKUQET7kkvhyCOp49dgFvRagLlbUCCWQpdeY7Mno4EWKY25dyqX99Ms0ZM_F6qbo8lpKjVSl6Q-Fu0q87nxb9TN3skXRE2DmuySHmVkYFARiX9bP0DDYQ01opz5IKoVIohp3SUjcO1ovgDF7uIAOUVNcCbjgr7yXsBahXqqOz9IHyedVWhIN-EnXg0VAzh5_8xHUSUr9GIiY_7CX8XYNyjg9dRw0S9GmwOoLiYUj6ThhPoPCQF5GE68-66LC8PC4GTgC6uBn2jLK2_-jjZriEFbwuVibeaRKW4WZnv-VnhCTv275vDISZn8upMRNMJn-QI8l-uP6rnFjrGL8s4berBvjH1O4AyOJeOa63_t8gdHsT3GAl13aZT2SWEfdEFHIx-kAhh7Ni64NX843oZ4sf2viWeVoJ0ZZR_nONSYO6DRGu1bBWF8I2g3qjV6xBsMxXdmaPbY7HolNY-Sbqee0Co1qOkJVYK4Fz29f3oA92jIhQkJW5Lv8Y8er2J8K0YVrlqfPIm0SdHa_JcByRL33MOLEx_KDQIOufqf92Wqh9VXR8bKLEz45K3hNaTw9RO1eVQsa3QQ_J4NcqgEGnE6eCzy9lR1YzuMlzf-hADtPTMeg8" charset="UTF-8"></script></head>
+  <body>
+    <h4>keypress - alphabets</h4>
+    Name (alphabets): <input type="text" id="txt1">
+    <script>
+      document.getElementById("txt1").addEventListener("keypress", sample);
+      function sample(event)
+      {
+        if ( (event.which >= 65 && event.which <= 90) || (event.which >= 97 && event.which <= 122) || (event.which == 32) || (event.which == 8) )
+        {
+          //no code for accepting
+        }
+        else
+        {
+          event.preventDefault();
+        }
+      }
+    </script>
+  </body>
+</html>
+

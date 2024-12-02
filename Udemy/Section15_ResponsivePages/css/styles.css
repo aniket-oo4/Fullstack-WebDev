@@ -1,0 +1,128 @@
+body {
+  font-family: "Segoe UI";
+  font-size: 22px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* styles for header tag */
+header {
+  background-color: #6b6b6b;
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* styles for nav tag */
+nav {
+  background-color: #b1afaf;
+  padding: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #929191;
+}
+
+/* styles for aside tag */
+aside {
+  background-color: #3484df;
+  padding: 15px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside ul li a:link,
+aside ul li a:visited {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+aside ul li a:hover {
+  background-color: #0a5a8f;
+}
+
+/* styles for main tag */
+main {
+  padding: 5px;
+  min-height: 80vh;
+}
+
+section.box {
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #413f3f;
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* small devices */
+@media only screen and (max-width: 768px) {
+  nav ul a {
+    width: 100%;
+  }
+}
+
+/* large devices */
+@media only screen and (min-width: 769px) {
+  nav ul a {
+    width: auto;
+    float: left;
+  }
+  nav {
+    height: 80px;
+  }
+
+  aside ul a {
+    width: auto;
+    float: left;
+  }
+
+  aside {
+    min-height: 80vh;
+    float: left;
+    width: 20%;
+  }
+
+  main {
+    float: left;
+    width: 80%;
+  }
+
+  section.box {
+    float: left;
+    width: 30%;
+  }
+
+  footer {
+    clear: left;
+  }
+}

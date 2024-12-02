@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--jQuery dependencies-->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!--PQ Grid files-->
+    <link rel="stylesheet" href="pqgrid.min.css" />
+    <link rel="stylesheet" href="pqgrid.ui.min.css" />
+    <!--bootstrap theme-->
+    <link rel="stylesheet" href="themes/bootstrap/pqgrid.css" />
+
+    <!--jsZip for zip and xlsx import/export-->
+    <script src="jsZip-2.5.0/jszip.min.js"></script>
+
+    <script src="pqgrid.min.js"></script>
+    <!--for localization and intellisense -->
+    <script src="localize/pq-localize-en.js"></script>
+
+    <!--for touch devices-->
+    <script src="pqTouch/pqtouch.min.js"></script>
+ 
+    <!--  script for excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <style>
+      .pq-grid {
+        font-size: 13px;
+      }
+    </style>
+    <script>
+      $(function () {
+        myToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmlrZXQiLCJyb2xlIjoiYW5pa2V0IiwiZXhwIjoiMjAyNC0wOS0xNlQwNDo1OTowMS44Njc1OTU2KzAwOjAwIn0.-erfhJdcl-secZoF5dk40SCHJs60JkkJyVqFXFrEsAk"
+        $.ajax({
+          type: "GET",
+          headers: { Authorization: "Bearer " + myToken },
+          url: "http://localhost:53842/api/leaveApi?start=1&size=20",
+          success: function (leaves) {
+            var data = leaves.Data;
+            console.log(data);
+
+            //  ---- Grid Implementation--
+            var obj = {
+              numberCell: {
+                resizable: true,
+                title: "#",
+                width: 30,
+                minWidth: 30,
+              },
+              //   editor: {type: 'textbox'},
+              title: "Employees Leave Applications",
+              resizable: true,
+              menuIcon: true,
+              scrollModel: { autoFit: true,
+                vertical:true,
+                overflow:'scroll'
+               },
+            };
+
+            //array of columns.
+            obj.colModel = [
+              {
+                title: "Leave ID",
+                width: 100,
+                dataType: "integer",
+                dataIndx: "leaveId",
+              },
+              {
+                title: "Employee Name",
+                width: 200,
+                dataType: "string",
+                dataIndx: "empName",
+              },
+              {
+                title: "Employee ID",
+                width: 170,
+                dataType: "string",
+                dataIndx: "empId",
+              },
+              {
+                title: "Leave Type",
+                width: 170,
+                dataType: "string",
+                dataIndx: "leaveType",
+              },
+              {
+                title: "Application Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "applicationDate",
+              },
+              {
+                title: "Start Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "leaveDateFrom",
+              },
+              {
+                title: "End Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "leaveDateTo",
+              },
+              {
+                title: "Reason",
+                width: 170,
+                dataType: "string",
+                dataIndx: "remark",
+              },
+            ];
+            obj.dataModel = { data: data };
+                obj.toolbar = {
+                items: [
+                    {
+                    type: "button",
+                    icon: "ui-icon-disk",
+                    label: "Export to Excel",
+                    listener: exportToExcel,
+                    },
+                ],
+                };
+
+                //function for exporting data
+                function exportToExcel() {              
+                    var grid = $("#grid_json").pqGrid("option", "dataModel").data;
+                    var ws = XLSX.utils.json_to_sheet(grid); // Convert JSON to a sheet
+                    var wb = XLSX.utils.book_new(); // Create a new workbook
+                    XLSX.utils.book_append_sheet(wb, ws, "Sheet1"); // Append the sheet to the workbook
+                    XLSX.writeFile(wb, "export.xlsx"); // Write the workbook to a file
+                
+                }
+            $("#grid_json").pqGrid(obj);
+          },
+        });
+
+    
+      });
+    </script>
+  </head>
+  <body>
+    <div id="grid_json" style="margin: 100px"></div>
+  </body>
+</html>

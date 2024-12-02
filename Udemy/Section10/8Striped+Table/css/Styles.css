@@ -1,0 +1,106 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#navbar {
+  background-color: #35b135;
+  height: 60px;
+}
+
+#navbar .navbar-brand {
+  width: 30%;
+  /* background-color: blue; */
+  float: left;
+  padding-top: 16px;
+  padding-left: 15px;
+  color: #ecebeb;
+  font-weight: bold;
+}
+
+#navbar .nav {
+  width: 70%;
+  /* background-color: red; */
+  float: left;
+}
+
+#navbar .nav ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 15px;
+}
+
+#navbar .nav ul li {
+  float: left;
+}
+
+#navbar .nav ul li a:link,
+#navbar .nav ul li a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+}
+
+#navbar .nav ul li a:hover {
+  background-color: #059205;
+}
+
+.center {
+  text-align: center;
+}
+
+/* table styles */
+.table {
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 2px #d4d0d0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+
+.table-container {
+  width: 95%;
+  margin: auto;
+}
+
+.table td {
+  border-top: 1px solid #a39d9d;
+  border-bottom: 1px solid #a39d9d;
+  padding: 8px;
+}
+
+.table th {
+  border: 1px solid #a19c9c;
+  padding: 12px 10px;
+  text-align: left;
+  background-color: #b1aeae;
+  color: #ffffff;
+}
+
+.table tr {
+  transition: background-color 0.3s;
+}
+
+.table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #cecccc;
+}
+
+.table tr:hover {
+  background-color: #b6aaaa;
+}

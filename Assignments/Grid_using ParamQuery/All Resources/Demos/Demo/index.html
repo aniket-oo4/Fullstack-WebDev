@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <!--jQuery dependency, any stable version of jQuery-->   
+  <script src="jquery-3.7.1.min.js"></script>   
+ 
+  <!--jQueryUI version 1.12, 1.13 -->
+      <link href="jquery-ui.min.css" rel="stylesheet" />
+      <link href="jquery-ui.structure.min.css" rel="stylesheet" />
+      <link href="jquery-ui.theme.min.css" rel="stylesheet" />
+      <script src="jquery-ui.min.js"></script>
+   
+  <!--ParamQuery Grid css files-->
+      <link rel="stylesheet" href="pqgrid.min.css" />   
+   
+      <!--add pqgrid.ui.css for jQueryUI theme support-->
+      <link rel="stylesheet" href="pqgrid.ui.min.css" />
+  
+      <!--ParamQuery Grid js files-->
+      <script type="text/javascript" src="pqgrid.min.js" ></script>  
+   
+      <!--ParamQuery Grid localization file (necessary since v5.2.0)-->
+      <script src="localize/pq-localize-en.js"></script>
+    
+</head>
+<body>
+    
+
+<div style="float:left;padding:20px;">
+    <div id="grid_parts"></div>
+</div>
+
+<div style="float:left;padding:20px;">
+
+    <fieldset>
+        <legend>
+            <!--input type=checkbox id="grid_parts_topVisible" /-->
+            <label for="grid_parts_topVisible">Top </label>
+        </legend>
+
+        <input type="checkbox" id="grid_parts_showTitle">
+        <label for="grid_parts_showTitle">Title </label>
+        <br>
+
+        <input type="checkbox" id="grid_parts_showToolbar">
+        <label for="grid_parts_showToolbar">Toolbar </label>
+        <br>
+
+        <input type="checkbox" id="grid_parts_collapsible">
+        <label for="grid_parts_collapsible">collapsible button</label>
+        <br>
+
+        <input type="checkbox" id="grid_parts_toggle">
+        <label for="grid_parts_toggle">fullscreen button</label>
+        
+    </fieldset>
+<p style="height:50px;"></p>
+<fieldset>
+<legend>Bottom</legend>
+    <input type="checkbox" id="grid_parts_paging">
+    <label for="grid_parts_paging">Local Paging</label>
+    <br>
+</fieldset>
+</div>
+
+<div style="float:left;padding:20px;">
+<fieldset>
+<legend>Main Table</legend>
+    <label><input type="checkbox" id="grid_parts_header">
+    Column Headers </label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_columnBorders">
+    Column Borders</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_freezeCols">
+    Freeze columns</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_rowBorders">
+    Row Borders</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_freezeRows">
+    Freeze rows</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_oddRowsHighlight">
+    Stripe Rows</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_numberCell">
+    Number Column</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_autoHeight">
+    Flex Height</label>
+    <br>
+
+    <label><input type="checkbox" id="grid_parts_flexWidth">
+    Flex Width</label>
+    <br>
+
+</fieldset>
+
+</div>
+
+<div style="clear:both;"></div>
+
+<script >
+ 
+ $(document).ready( 
+    function loadData(){
+
+        myToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmlrZXQiLCJyb2xlIjoiYW5pa2V0IiwiZXhwIjoiMjAyNC0wOS0xMVQwNDo0ODozNC45NTc1MzgyKzAwOjAwIn0.UALv8W1UkJYoISgb57iUYGAaxTU-eMOIOYKiYu66mfI"
+        $.ajax(
+                {
+                    type: 'GET',
+                    headers: {"Authorization": "Bearer " +myToken},
+                    url: 'http://localhost:53842/api/leaves',
+                    success: function (leaves) {
+                        var data = leaves.Data;
+                        console.log(data);
+                       
+
+                        $(function () {
+            						
+       let demoData=[];
+       data.forEach(element => {
+        demoData.push([element.leaveId,element.empName,element.empId,element.leaveType,element.leaveDateFrom,element.leaveDateTo,element.remark]);        
+       });
+       console.log(demoData);
+        var options = {
+            width: 400,
+            collapsible: {on: false, toggle: false},
+            colModel: [
+                { title: "Leave ID", width: 100, dataType: "integer" },
+                { title: "Employee Name", width: 200, dataType: "string" },
+                { title: "Employee ID", width: 170, dataType: "string" },
+                { title: "Leave Type", width: 170, dataType: "string" },
+                { title: "Start Date", width: 170, dataType: "string" },
+                { title: "End Date", width: 170, dataType: "string" },
+                { title: "Reason", width: 170, dataType: "string" }
+            ],
+            columnBorders: false,
+            dataModel: { data:demoData},
+            freezeCols: 0,
+            freezeRows: 0,                        
+            height: 360,            
+            numberCell: { show: false },
+            pageModel: {
+                type: "",
+                rPP: 10, strRpp: "{0}",
+
+                //customize localization strings.
+                strDisplay: "{0} to {1} of {2}",
+                strPage: "Page {0} / {1}",
+
+                layout: ["strRpp", "|", 'first', 'prev', 'next', 'last', "|", "strPage", ]
+            },
+
+            //important option for this example.
+            reactive: true,
+            roundCorners: false,
+            rowBorders: false,
+            selectionModel: { type: 'cell' },
+            stripeRows: false,
+            scrollModel: {autoFit: false},            
+            showHeader: true,
+            showTitle: false,
+            showToolbar: false,
+            showTop: true,
+            title: "Grid Parts",            
+            toolbar: {
+                items: [{
+                    type: "button",
+                    label: 'button on toolbar',
+                    listener: function () {
+                        alert("button clicked");
+                    }
+                }]
+            }
+        };
+
+        var grid = pq.grid("#grid_parts", options);
+        pq.grid( selector, { bootstrap: { on : true } } );
+        $("#grid_parts_topVisible").change(function (evt) {
+            options.showTop = $(this).prop("checked");            
+        }).attr("checked", options.showTop );
+
+        $("#grid_parts_showTitle").change(function (evt) {
+            options.showTitle = $(this).prop("checked");            
+        }).attr("checked", options.showTitle );
+
+        $("#grid_parts_showToolbar").change(function (evt) {
+            options.showToolbar = $(this).prop("checked");            
+        }).attr("checked", options.showToolbar );
+
+        $("#grid_parts_collapsible").change(function (evt) {
+            options.collapsible.on = $(this).prop("checked");            
+        }).attr("checked", options.collapsible.on );
+
+        $("#grid_parts_toggle").change(function (evt) {
+            options.collapsible.toggle = $(this).prop("checked");
+        }).attr("checked", options.collapsible.toggle );
+
+        $("#grid_parts_header").change(function (evt) {
+            options.showHeader = $(this).prop("checked");            
+        }).attr("checked", options.showHeader );
+
+        $("#grid_parts_columnBorders").change(function (evt) {
+            options.columnBorders = $(this).prop("checked");
+            
+        }).attr("checked", options.columnBorders );
+
+        $("#grid_parts_rowBorders").change(function (evt) {
+            options.rowBorders = $(this).prop("checked");
+            
+        }).attr("checked", options.rowBorders );
+
+        $("#grid_parts_freezeRows").change(function (evt) {
+            options.freezeRows = $(this).prop("checked") ? 2 : 0;
+            
+        }).attr("checked", options.freezeRows > 0 ? true : false);
+
+        $("#grid_parts_freezeCols").change(function (evt) {
+            options.freezeCols = ($(this).prop("checked") ? 1 : 0);         
+        }).attr("checked", options.freezeCols > 0 ? true : false);
+
+        $("#grid_parts_oddRowsHighlight").change(function (evt) {
+            options.stripeRows = $(this).prop("checked");            
+        }).attr("checked", options.stripeRows);
+
+        $("#grid_parts_numberCell").change(function (evt) {
+            options.numberCell.show = $(this).prop("checked");
+            
+        }).attr("checked", options.numberCell.show);
+
+        $("#grid_parts_autoHeight").change(function (evt) {
+            options.height = ($(this).prop("checked") ? 'flex' : 360);           
+        }).attr("checked", (options.height == 'flex'));
+
+        $("#grid_parts_flexWidth").change(function (evt) {
+            var flex = $(this).prop("checked");            
+            options.width = flex? 'flex': 400;                                    
+        }).attr("checked", (options.width == 'flex'));
+        
+
+        $("#grid_parts_resizable").change(function (evt) {
+            options.resizable = $(this).prop("checked");            
+        }).attr("checked", options.resizable );
+
+        $("#grid_parts_paging").change(function (evt) {
+            var paging = $(this).prop("checked")? "local": "";            
+            options.pageModel.type = paging;            
+        }).attr("checked", (options.pageModel.type == "local"));
+
+        $("#grid_parts_roundCorners").change(function (evt) {
+            options.roundCorners = $(this).prop("checked");
+        }).attr("checked", options.roundCorners );
+    });
+
+
+
+
+                    }
+                });
+
+
+        });
+
+   
+</script>
+
+
+
+</body>
+</html>

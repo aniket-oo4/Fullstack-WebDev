@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=w1A-wV8mdEshzTgT5wRI8rlMfoNBPv3deJ8dkEIHR444YS-v4pyYYzX2KqUsPzYty67o2ZR_rSC65ekmm0TXQfCUZ7fHby1nA0b46AMMUC_cNQ_Bdtr3mvisc0Iv-4Ig9qYTGqXbDJzvyNwLzZ8_k9wFsU7vVbj3ranFuRoPvO85TX4vhKhaCVD3n6TOJlc0oNuwy2iCa2sNBlZm5NYub0_bHOVuJ3bkn6WYRifwYWQnCY9pFAF2c5bwmR7r3Oq8WkhRppp_4Vja3H1cMif74xlOBzTkyMF0zo2H2nk_nTOqfncmTYP2J6Acht-17lYDg0r7cU6Of8EC0KByFhaAOg6mE17hk1DL-RQeI5UQUkQjVYeKLFA394Ph7wjyQgckdlJ0xoQ_8AxZhdqPiyVue-1DWbpL3jYG_Nl7PCSeEU8OW9bJaCiXrRpAtPUunRrA0Uwxha0-N5KyCHzdteQg-ClU-f8tLX2R3drXpzKExmqvaDiuKRNfD47_DsBakEGNrwaD_1bG3ccksTUizMp9y2iZpvVjVxL0X9KsiNL25U8gg81HZqMw-xgsm13wpiV2kd1YceCvwEdILm5h9tjcuSdlo2OxUccLWgOvxQ6Iy3mr8oJSZdKbZla86UkFUluU0c7Vo_Iv39iFnBchaE5OymJLazvKMUiKQKuHepkEIkUAk-pvYLwXCRad0xuRUvSR7TTDHxMgKDFnuzdOt9i08t-LxI0JpJGBHOMiLGnrgE-p5FZne4qhRD5ygb8sqcZDWHojLvdQEcVdRR0IKmxtTA" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>cut copy paste</h4>
+    <input type="text" value="1234">
+    <input type="text" value="abcd">
+    <script>
+      document.addEventListener("cut", sample1);
+      function sample1(event)
+      {
+        event.preventDefault();
+        alert("cut not allowed");
+        console.log("cut " + new Date().toLocaleTimeString());
+      }
+
+      document.addEventListener("copy", sample2);
+      function sample2(event)
+      {
+        event.preventDefault();
+        alert("copy not allowed");
+        console.log("copy " + new Date().toLocaleTimeString());
+      }
+
+      document.addEventListener("paste", sample3);
+      function sample3(event)
+      {
+        event.preventDefault();
+        alert("paste not allowed");
+        console.log("paste " + new Date().toLocaleTimeString());
+      }
+    </script>
+  </body>
+</html>
+

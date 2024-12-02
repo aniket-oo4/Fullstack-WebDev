@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=WqOeDrAWbZ4_-tVGezI0xqCZ6LkKRSbFY1OCjW9SYGqECLqQqUM7s5Vpl00PrMrxtVVXgwbL5B9MzXBBPVlJLVXSCGLALCf_sT_KVNeh_rVwRPhzwUSteKacW446DFFVcogd0LCJFIcHyluHzAs40xYUaFwLgzYo6DiXWI3Sw32-OW9Y47fgAtbgYfK_nITa6-ZGq_kq5Hs3BEbPzD9Haxaz0CLzvepI3zUVTitILjVsS61B85CURP0lAMUrftrFGATKi6Q7ourtxzUlA2zpVnvuO2tWSgBpgjrDRzdkzn6lIqwVKP8ZLSW47uhneng04_L1KvSzs67FZaEM1_vFn4Aqd99jyZuRTl0mhyiXzHaq4BEhvf1pbn6IKVTxNsXHIxalU2SfuhjHEOncfFHVgIqtY_3ns2IpQ6WhKxX8TQ-88CRnwtuP46L-eKx2qLRsNjv81SfwoiKFcJAT8AlSioYzB9yzp96CcTuMzw8HuJZ6vIF_BYEwUQyJqZs8M_CQYT9TNMxQ03XDXuCaiLJUFyFWUn5m8o0Sr1spZDpra3NRk3VQRzNl4xS_DeB4Yk6I6ASeBZkAL2nAUWOTytA0sagDK2yOSBRGT5lPjPNH09nqoN72BXujOscQckvyTTVAJwOw8Wu-nSiTX2FkU6FKo9oudH5THn5hrX7VhaX7tuPWZtqg4V67xU1j5Ev8R9bh1gfOXF2IPPjF3RxaefEKrpdq1AhyroIi5NP4qhfvof8gZp45wijkcYluAWbC2uTMh4ru5va1lbZOABq2Ar_vRg" charset="UTF-8"></script><style>
+    </style>
+  </head>
+  <body>
+    <h4>keyup</h4>
+    Source text: <input type="text" id="txt1"><br>
+    Destination text: <input type="text" id="txt2"><br>
+    <script>
+      document.getElementById("txt1").addEventListener("keyup", sample);
+      function sample()
+      {
+        var s = document.getElementById("txt1").value;
+        document.getElementById("txt2").value = s;
+      }
+    </script>
+  </body>
+</html>
+
+

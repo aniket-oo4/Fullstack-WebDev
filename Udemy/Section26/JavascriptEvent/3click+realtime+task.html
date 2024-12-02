@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=4sGgHPOAeWVVu7D2Kfe2C8p1Xya5lIhnFEjk-Te_3Vkg94q-2txSmeZPDWMM0WlP0VzbdX6NTsDGsGU-UUWmw85PCng-ZJ5_B3o_Ks5UxaEpyBODvHgwhHoKQ35GVHkKXmSjx95RqKANojVfj4F_UJ6xxk1whYRumbY9m98OxRHHVfa84wWjuwgk4fFCfqxfx1ol3Z9EvmsgikyedIxebvekAqkWIfplisZbW-cvdreTSucTvT8HmWHbZCUW7DxM5ZK5-IYzWn_7bW4keaBa3K-_Tfduts187TiUKplydyluAdX6gRyJs7SJcDlJS9pCTNM6PRovQABpMk1o5qPuJ8aX9EWEmAfVxHj4ehxd0ZtT2Tt_Sh2PFHxDXpxzTZt02i48okSYKGLXehrMX8MGOQ_8bBXpYj2DtYe41Cd0J32GRLm6aJxj9qC3PJPy1_KEQtnzt44s0G9TC1nEavVIAKgmvSdshFZ8TOWTKTjfMLwryT0juRSqZL2ENOPvLoL8g2zwUQTWq-y5oFnNmmlNiypzMwZGfQ3Jdw_Sz-7bCuu3ffvDqRihosTPvRv-SFbtic0MJfqjM7xnvnM99-kHGHQpcRFsYpMTQJv-AHZIX9scofhiNu6E1Gx2rTv_RLwUx1NQxFnBDcvzPveCf3UeLxd-oCCv1uZQuMPB5CAnbcd8VN9PVlOslhz3HX3vx67pgGLWCpJ0CkMZ9QQ2N96xYTi9JlVLqj9kFBiZxpLXk_GWi4uxkxyNfskXUUtH-mW8cjp5GQ6NC0Od9cIqd5q1kSqNCm0I79GXTH63lbu9sYw" charset="UTF-8"></script><style>
+      #div1
+      {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>click - realtime task</h4>
+    <form>
+      Price: <input type="text" id="txt1"><br>
+      Tax: <input type="text" id="txt2"><br>
+      <input type="button" value="Calculate" id="button1"><br>
+      Net Price: <input type="text" id="txt3"><br>
+    </form>
+    <script>
+      document.getElementById("button1").addEventListener("click", sample);
+      var c = 0;
+      function sample()
+      {
+        c++;
+        console.log(c);
+        var price = Number( document.getElementById("txt1").value );
+        var tax = Number( document.getElementById("txt2").value );
+        var netPrice = price + tax;
+        document.getElementById("txt3").value = netPrice;
+      }
+    </script>
+  </body>
+</html>
+
+

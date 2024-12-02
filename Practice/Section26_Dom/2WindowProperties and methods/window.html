@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>  //window properties 
+
+    // //1.location
+    //     console.log(location.href); // returns current page url 
+    //     console.log(window.location.href); // both are same 
+
+    // //2.navigator
+    //     console.log("navigaotr :",window.navigator.userAgent); //returns browser and opearating system details
+       
+    // //3.screenX & screenY
+     
+    //     console.log("x:",window.screenX); // horizontal position in form of pixels
+    //     console.log("y:",window.screenY);//vertical position
+     
+
+    //4.alert()
+// window.alert("hello");  // display only ok button
+// alert () returns undefined 
+
+//5.confirm()
+//console.log(window.confirm ("Are You sure "));  // displays ok and cancel also 
+// confirm will returns true if ok  or false  if cancel
+
+
+// 6.Print() :: it is used to display print option(dialog box ) and allows to print current working document 
+// var result=window.print();
+// /returns  undefined
+
+
+// //7.setTimeOut(); // sets the time for specfic event // it only executes only once 
+// setTimeout(() => {
+//     console.log('hello world ');
+// }, 1000*3);  //1000 =1 sec 
+// // firstpara is Method to execute  as callback 
+// // second is time period  in the form of milliseconds ,after how many seconds to excute 
+
+// // also assign function as
+// setTimeout(sayHello(),3000);
+
+// function sayHello(){
+//     console.log("saying hello");
+// }
+
+// setTimeout(displayTime,1000);
+// function displayTime(){
+// console.log(new Date().toLocaleTimeString());
+// }
+
+////8.setInterval (function,interval)
+// // it is used to call the function repeatedely for every completion of specified no .of . milli seconds only 
+// setInterval(displayTime,1000);
+// real time use -- new update ,realatime scores , realtime data display ,auto refreshing 
+
+
+
+// 9.scrollTo();
+// scrollTo(x,y); first para - horizontal pos , second para -verticall pos
+// it is used to  scroll the web page horizontally or vertically based on x and y coordinated 
+
+
+//10.open() ;
+// it is used to pop up new window ,
+//ex adds new popup etc some blogs appear etc 
+
+// window.open(); //  creates new tab 
+window.open("ScrollTo.html","Logical name","width=300,height=400")  // parameter - any file path to open ,orurl of page 
+// another parameters are
+// second  para is logical name 
+//third is widthand heigh :- if we mention width and height it will not create new tab it popups new window 
+
+</script>
+</body>
+</html>

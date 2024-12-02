@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=50aDkBduHTjtlQ0u1k23c68XKpSMunWLQsOnZ6_1w8gG19ciSTLzAvm0jGase2nv-oBzXZ4YvlkkgbwrzO2JN16j2uLwmov69olleWBbvYEoH-OBDsr8QlvyNbDviKD0HLrhB0WxCvpMAwelU3y6pwLF0knD40MNS2VHqbmuIekPxKDUBplcM8qspJyG27t5UxVw8q8m3wPvWgw9_cqm6LPdXKV7wfvFtV0r6I5pQGWpEUqFRP486gqyulZoLf_RFrZy87-DAPw7x7igXV9ZcABJokOvjAu6RMyAypfw7LJGuh3I14EK8QBiJbQ6seOD1ZcJiL30aPd64OC-3nJZbrlDQjbSOcvT-BPcbCeQUqzpMIvF7A4oWlV2aN_rDB2ublLskkyyt-U3KD0xr8iV9toz4F3dF9ULle2kz5oqEEbjax8NofLKqZkuMYAt5QnatYTOfzUhjRgSS9XFiwZseoyxD22UPVcZlcYmcV0Gn54Evu3IgnkMKiFVbXNV3C1_0YXJmz-5ftF6K2bhfFMqkLhq4Vhf-4lFgiDYdCndSBPErPQUANL8GwXqKtF_SUsCzkaQtd1x_xG8dVFditmrjOZEMVhi0PoGktlfuuA0hKpi8uKDTxQfQ_Uc1of9a8O8IpvUgIGyvohALBsQ5VGbmiPkUNYpfmgTble9_xCJv1itxrwV2-tX52RTE87ULeLZtUwbejFCqi1LEGYQPaGFqHMGaRV1-_SIOZlw4Q9TjwIf_cFymoJxDd8IRFreDpyRBjiv1cyJAjFxxEw3DmmBuA" charset="UTF-8"></script><style>
+      .error
+      {
+        color: red;
+      }
+      #span1,#span2,#span3,#span4,#span5,#span6,#span7,#span8
+      {
+        display: none;
+      }
+      .class1
+      {
+        border: 1px solid red;
+      }
+      .class2
+      {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Validatioms</h4>
+    <form id="form1">
+      Firstname:
+      <input type="text" id="txt1">
+      <span id="span1" class="error">Firstname can't be blank</span>
+      <span id="span5" class="error">Firstname must contain alphabets only</span>
+      <br>
+
+      Lastname:
+      <input type="text" id="txt2">
+      <span id="span2" class="error">Lastname can't be blank</span>
+      <span id="span6" class="error">Lastname must contain alphabets only</span>
+      <br>
+
+      Email:
+      <input type="text" id="txt3">
+      <span id="span3" class="error">Email can't be blank</span>
+      <span id="span7" class="error">Email is invalid</span>
+      <br>
+
+      Amount:
+      <input type="text" id="txt4">
+      <span id="span4" class="error">Amount can't be blank</span>
+      <span id="span8" class="error">Should be between 1000 and 10000</span>
+      <br>
+
+      <input type="submit" value="Register" id="button1">
+    </form>
+    <script src="validations.js"></script>
+  </body>
+</html>
+
+

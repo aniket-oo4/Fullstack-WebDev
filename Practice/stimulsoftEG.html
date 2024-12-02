@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimulsoft Reports Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stimulsoft-reports-js@2024.3.5/Css/stimulsoft.designer.office2013.whiteblue.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/stimulsoft-reports-js@2024.3.5/Scripts/stimulsoft.reports.min.js"></script>
+</head>
+<body>
+    <div id="viewerContent" style="width: 100%; height: 600px;"></div>
+    <script>
+        // Initialize the viewer
+        var viewer = new Stimulsoft.Viewer.StiViewer(null, "viewer", false);
+        viewer.renderHtml("viewerContent");
+
+        // Load a report
+        // Example: Replace with the path to your .mrt file
+        viewer.report.loadFile("D:/AscentESS/ascentess53410/Stimulsoft/EmployeeAssessmentReport.mrt");
+    </script>
+</body>
+</html>
+
+

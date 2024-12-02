@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--jQuery dependencies-->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!--PQ Grid files-->
+    <link rel="stylesheet" href="pqgrid.min.css" />
+    <link rel="stylesheet" href="pqgrid.ui.min.css" />
+    <!--bootstrap theme-->
+    <link rel="stylesheet" href="themes/steelblue/pqgrid.css" />
+
+    <!--jsZip for zip and xlsx import/export-->
+    <script src="jsZip-2.5.0/jszip.min.js"></script>
+
+    <script src="pqgrid.min.js"></script>
+    <!--for localization and intellisense -->
+    <script src="localize/pq-localize-en.js"></script>
+
+    <!--for touch devices-->
+    <script src="pqTouch/pqtouch.min.js"></script>
+
+    <!--  script for excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <style>
+      .pq-grid {
+        font-size: 13px;
+      }
+      #grid_json{
+        overflow: auto;
+      }
+    </style>
+    <script>
+      $(function () {
+        myToken =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmlrZXQiLCJyb2xlIjoiYW5pa2V0IiwiZXhwIjoiMjAyNC0wOS0xM1QwNDo0Njo1Mi44NTgxOTIzKzAwOjAwIn0.SfNCSS2epKxXcJYzTK0eyQY4oNUBax8rwTZSAQ8S_rA";
+
+        $.ajax({
+          type: "GET",
+          headers: { Authorization: "Bearer " + myToken },
+          url: `http://localhost:53842/api/leaveApi`,
+          success: function (leaves) {
+            var data = leaves.Data;
+            console.log(data);
+            mydata = data;
+            //  ---- Grid Implementation--
+            var obj = {
+              numberCell: {
+                resizable: true,
+                title: "#",
+                width: 30,
+                minWidth: 30,
+              },
+              //   editor: {type: 'textbox'},
+              title: "Employees Leave Applications",
+              resizable: true,
+              menuIcon: true,
+              scrollModel: {               
+                autoFit: true,
+                virtualY:true
+                
+              },
+            };
+
+            //array of columns.
+            obj.colModel = [
+              {
+                title: "Leave ID",
+                width: 100,
+                dataType: "integer",
+                dataIndx: "leaveId",
+              },
+              {
+                title: "Employee Name",
+                width: 200,
+                dataType: "string",
+                dataIndx: "empName",
+              },
+              {
+                title: "Employee ID",
+                width: 170,
+                dataType: "string",
+                dataIndx: "empId",
+              },
+              {
+                title: "Leave Type",
+                width: 170,
+                dataType: "string",
+                dataIndx: "leaveType",
+              },
+              {
+                title: "Application Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "applicationDate",
+              },
+              {
+                title: "Start Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "leaveDateFrom",
+              },
+              {
+                title: "End Date",
+                width: 170,
+                dataType: "date",
+                dataIndx: "leaveDateTo",
+              },
+              {
+                title: "Reason",
+                width: 170,
+                dataType: "string",
+                dataIndx: "remark",
+              },
+            ];
+            // obj.dataModel = { data: data };
+            obj.dataModel = { data: [] };
+
+            obj.toolbar = {
+              items: [
+                {
+                  type: "button",
+                  icon: "ui-icon-disk",
+                  label: "Export to Excel",
+                  listener: exportToExcel,
+                },
+              ],
+            };
+
+            //function for exporting data
+            function exportToExcel() {
+              var grid = $("#grid_json").pqGrid("option", "dataModel").data;
+              var ws = XLSX.utils.json_to_sheet(grid); // Convert JSON to a sheet
+              var wb = XLSX.utils.book_new(); // Create a new workbook
+              XLSX.utils.book_append_sheet(wb, ws, "Sheet1"); // Append the sheet to the workbook
+              XLSX.writeFile(wb, "export.xlsx"); // Write the workbook to a file
+            }
+            $("#grid_json").pqGrid(obj);
+
+            setupInfiniteScroll();
+
+            function setupInfiniteScroll() {
+              var page = 0; // Current page
+              var pageSize = 10; // Number of records per page
+              var loading = false;
+
+              var largeData = data;
+              console.log("largeDAta:", largeData);
+              function fetchData(page, pageSize) {
+                var start = page * pageSize;
+                // debugger;
+                var end = start + pageSize;
+                return largeData.slice(start, end);
+              }
+ 
+             
+
+              // $("#grid_json").on("scroll", function () {
+              //   var scrollTop = $(this).scrollTop();
+              //   var scrollHeight = $(this)[0].scrollHeight;
+              //   var clientHeight = $(this)[0].clientHeight;
+
+              //   if (scrollTop + clientHeight >= scrollHeight - 10 && !loading) {
+              //     loading = true; // Set loading to true to prevent multiple requests
+
+              //     // Fetch new data and append it to the grid
+              //     var newData = fetchData(page, pageSize);
+              //     console.log(newData);
+              //     if (newData.length > 0) {
+              //       var grid = $("#grid_json").pqGrid("option");
+              //       var dataModel = obj.dataModel;
+              //       console.log(typeof dataModel);
+              //       // Append new data to the grid
+              //       dataModel.data = dataModel.data.concat(newData); //adding new data to existing
+
+              //       $("#grid_json").pqGrid(
+              //         "option",
+              //         "dataModel.data",
+              //         dataModel.data
+              //       );
+              //       $("#grid_json").pqGrid("refreshDataAndView");
+
+              //       page++;
+              //     }
+              //     loading = false;
+              //   }
+              // }); // onscroll event closed
+            
+
+
+              // Event handler for scrolling
+              // $("#grid_json").on("scroll ", Bind); // onscroll event closed
+            
+              $("#grid_json").scroll(Bind);
+              function Bind () {
+               
+           
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(this)[0].scrollHeight;
+                var clientHeight = $(this)[0].clientHeight;
+           
+                if (scrollTop + clientHeight >= scrollHeight - 10 && !loading) {
+                  loading = true; // Set loading to true to prevent multiple requests
+                  
+                  // Fetch new data and append it to the grid 
+                //  debugger;                
+                  var newData = fetchData(page, pageSize);
+                  // console.log(newData);
+                  if (newData.length > 0) {
+                    console.log(newData);
+                    var grid = $("#grid_json").pqGrid("option");
+                    var dataModel = obj.dataModel;
+                    console.log(typeof dataModel);
+                    // Append new data to the grid
+                    dataModel.data = dataModel.data.concat(newData); //adding new data to existing
+
+                    $("#grid_json").pqGrid(
+                      "option",
+                      "dataModel.data",
+                      dataModel.data
+                    );
+                    $("#grid_json").pqGrid("refreshDataAndView");
+
+                    page++;
+                  }
+                  loading = false;
+                }
+              }  //BindClosed 
+          
+            }; //setupInfinitescroll closed
+          }, //success closing
+        }); //ajax closing
+      }); //document load
+
+
+    </script>
+  </head>
+  <body>
+    <div id="grid_json" style="margin: 100px"></div>
+  </body>
+</html>

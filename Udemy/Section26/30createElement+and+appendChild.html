@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=TUlQzuaBrY8QKJe3W8PsMg7c5D-mSC-HtnIs4WLReKjkwErb_V4ejxSzAUTgLT_9wNL7VoCtfOTa9RvoRoKaFxuuQHWR7h6zStaNDozdm7BkB252xZje0cME95W8_gM37zdN-a9XFGjbtwyjP4exhfLWnWVtOEcXJ-IwPmZIqNMjqL3-JQiG20BQSTyh33nZPQsX4o6uHnStogmyIGDv_Zzli9eME1hwYiWieVRaaf_zoTv1pkYu7qCqfWU1wBG6f1C7nGgGU6DtybPb4_Z0tiNQZ61DrdHeR33PmFyE9ou2Fou4F6fblzUUEv_k9z6UVtc0XFBOd6p1wVVfEaMx1M9pPyEtWbULVbb49ZZZAnrnOUBf6ZeI2JBwXNgJ0M5GVnf1-hfpHsq_y194XniChcL8oJe7tCu4Tr8Dq0TXxOdc7mmIWmtsDeIhZeECEfA6uarSYV8FMzNoJBIMVOgVWPLnltWj8i0L1gfXgcNN3gKGYEe8rPoEzQLBH-GlqPknwqA_iZDa4BzQ616UHA6pQEZyFSUxU3N86kegEiG5pzEoqtUZnzjInuneMGLPJm3aPVtPkcHcaQuiklA9dUyI_wh71fYxReR3FIypcaacRQhyH7Wpe-kU_BgCmgQezOmSqn6lwbkoWms59vd2wMhXRFObIv_u20IBT4MfOOgYt-oK4WwIfsSLMssxJClVgXtLvYYD5hB8yq2nW9nUpEnYmOx5b6cWSLTiPLwcgDxdiDQGaNxU2UfNxb7K1SaZ6vZfpvhQAQlKpV1cUyrADbcInG0SWyxK8Nps50t-bJaaaK8" charset="UTF-8"></script></head>
+  <body>
+    <h4>createElement and appendChild</h4>
+    <div id="div1">
+      <p id="p1">para 1</p>
+      <p id="p2">para 2</p>
+      <p id="p3">para 3</p>
+      <p id="p4">para 4</p>
+    </div>
+    <script>
+      var newpara = document.createElement("p");
+      newpara.innerHTML = "para 5";
+      newpara.style.backgroundColor = "lightgreen";
+      //document.getElementById("div1").appendChild(newpara);
+      var p3 = document.getElementById("p3");
+      document.getElementById("div1").insertBefore(newpara, p3);
+    </script>
+  </body>
+</html>
+
+

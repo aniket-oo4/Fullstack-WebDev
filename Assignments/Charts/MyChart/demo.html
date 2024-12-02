@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="style.css">
+    <style>
+.chart{
+ width: 600px;
+ height: 500px;
+ border:2px solid black;
+ background-color: rgb(199, 186, 186);
+ position: relative;
+ 
+}
+.bars{
+    display:inline-block;
+    
+    width: 30px;
+    border:1px solid rgb(46, 22, 22);
+    justify-content:space-between;
+ position: absolute;
+ background-color: rgb(24, 237, 237);
+ bottom: 20px;
+  left: 30px;
+  height: 10%;
+
+}
+#b1{
+    margin-left: 0px;
+    height: 0%; 
+}
+#b2{
+    margin-left: 30px;
+    height: 70%; 
+}
+#b3{
+    margin-left: 60px;
+    height: 60%; 
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="chart" class="chart">
+
+<i class="bars " id="b1"></i>
+<!-- <i class="bars " id="b2">b</i>
+<i class="bars " id="b3">c</i> -->
+
+    </div>
+    
+    <script src="script.js"></script> 
+    <script>
+
+
+
+      addBar(40);
+      addBar(70);
+      addBar(90);
+      addBar(3);
+      addBar(55)
+      addBar(77)
+    </script>
+</body>
+</html

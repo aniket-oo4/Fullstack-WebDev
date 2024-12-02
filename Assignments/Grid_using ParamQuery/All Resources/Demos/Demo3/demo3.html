@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParamQuery Grid Example</title>
+<!--jQuery dependency, any stable version of jQuery-->   
+<script src="jquery-3.7.1.min.js"></script>   
+ 
+<!--jQueryUI version 1.12, 1.13 -->
+    <link href="jquery-ui.min.css" rel="stylesheet" />
+    <link href="jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="jquery-ui.theme.min.css" rel="stylesheet" />
+    <script src="jquery-ui.min.js"></script>
+ 
+<!--ParamQuery Grid css files-->
+    <link rel="stylesheet" href="pqgrid.min.css" />   
+ 
+    <!--add pqgrid.ui.css for jQueryUI theme support-->
+    <link rel="stylesheet" href="pqgrid.ui.min.css" />
+
+    <!--ParamQuery Grid js files-->
+    <script type="text/javascript" src="pqgrid.min.js" ></script>  
+ 
+    <!--ParamQuery Grid localization file (necessary since v5.2.0)-->
+    <script src="localize/pq-localize-en.js"></script>
+</head>
+<body>
+    <div id="grid"></div>
+
+    <script>
+        $(function () {
+            $("#grid").pqGrid({
+                width: "100%",
+                height: 400,
+                title: "Sample ParamQuery Grid",
+                colModel: [
+                    { title: "ID", width: 50, dataIndx: "id" },
+                    { title: "Name", width: 150, dataIndx: "name" },
+                    { title: "Age", width: 100, dataIndx: "age" },
+                    { title: "Country", width: 150, dataIndx: "country" }
+                ],
+                dataModel: {
+                    data: [
+                        { id: 1, name: "John Doe", age: 30, country: "USA" },
+                        { id: 2, name: "Jane Smith", age: 25, country: "Canada" },
+                        { id: 3, name: "Sam Brown", age: 40, country: "UK" }
+                    ]
+                }
+            });
+        });
+    </script>
+</body>
+</html>

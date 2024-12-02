@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        margin: 2px;
+        cursor: pointer;
+      }
+      .class1 {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>click - realtime task 2</h4>
+    <img id="1" src="book1.jpg" width="70px" />
+    <img src="book2.jpg" width="70px" />
+    <img src="book3.jpg" width="70px" />
+    <img src="book4.jpg" width="70px" />
+    <img src="book5.jpg" width="70px" />
+    <br />
+    <input type="button" value="Buy Now" id="button1" />
+
+    <script>
+      var allBooks = [
+        { bokImage: "book1.jpg", price: 10 },
+        { bokImage: "book2.jpg", price: 120 },
+        { bokImage: "book3.jpg", price: 444 },
+        { bokImage: "book4.jpg", price: 322 },
+        { bokImage: "book5.jpg", price: 895 },
+      ];
+      var selectedBooks = [];
+      let images = document.getElementsByTagName("img"); //returns html collection
+      let arr = Array.from(images); // converts any iterable data into an array datatype
+      arr.forEach((img) => img.addEventListener("click", sample));
+      function sample(event) {
+        //used event Argumnet which consist all details about event
+        // console.log(event);
+        event.target.setAttribute("class", "class1");
+      }
+      //----------------------------------------
+      document.getElementById("button1").addEventListener("click", sample2);
+     
+      function sample2(event) {
+        var totalPrice=0;
+        var selectedBookTags = document.getElementsByClassName("class1");
+        console.log(selectedBookTags);
+        
+        for(let i=0;i<selectedBookTags.length;i++){
+            var currentImgSrc=selectedBookTags[i].getAttribute("src");    
+            let book=allBooks.find((img)=>{return img.bokImage==currentImgSrc});
+            if(book){
+               
+                totalPrice+=book.price;     
+                console.log("price:",book.price,"TOtal price :",totalPrice);           
+            }
+        }
+        console.log("Total :",totalPrice);
+      }
+    </script>
+  </body>
+</html>

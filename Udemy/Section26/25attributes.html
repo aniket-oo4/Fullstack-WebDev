@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=ct-KODoP4fEeDktkvTvdRkb2habmczlYxrn1WYPgz9No-mrCPcqFzNm9SjC15EsNwoRjZO_abL4ZpfgM7DKfxr0_Lj2BJDNXD_ambiHtukNGcfgdzTQ7Av4OD1AEumRcdhM6tmasssBtb-Y7Ew_7IcnQUMkJy4gbGDmCyQBvNKGIeLHVXy-iXgE6cfTg8JVQs1xYulFME4vuaTL4MPqJwThsDpMABgi1H7CgDQAhvvBz-DP_n5LMt7PVSMYkw7BSQ0vHoq7Uombe0HULoG-JWGYZBcEM3aY23P_5tipzb_eQI4xwREizl4kvUvYXwPhe8UlncKxmSxiT2WUh9Nr26Y26NMekiFGRcdkPGMbpro82WORPYJkSinmdGhRsETXs7npvbzO6tHzyxVKKcmXWU6bQDA2UXIeDheFxUex3dQnyy_0lhXpiUTSTgcskRxT8ipE-FRUnHHddFoz0Z96rb00tASnTvkr4lEC8NZnaRzHKuPB00jrJduleJqrYfquV_mvfZhUqaDc8STw_4J5NQT014U8hBnePAJFJ7ogxZVmBBxHt4AlzYXZEbcUu8Fay3QwZ5TNuLMg0AylnjYC58-uejKcnnlyNxgcfFemK3Y0LyKpTXxFvdZdIkWZjE90iHrJgDlzJ7w2DnsA-lmIC_PddXvd9dqyVwpxAaWGKSXKre59_kiE_daJHy-l1mflEAn-TP8_6DvXR433cAnoHZC-y7LW2HjIwrsm-o4d_-slouczs2qOx9R4GkKlbkU7C7suYh6qYnMwlXd1yfmGcSQ" charset="UTF-8"></script></head>
+  <body>
+    <h4>attributes</h4>
+    <img id="myimage" width="200px" height="120px" src="img1.jpg" title="Hello" alt="alternate text">
+    <script>
+      console.log( document.getElementById("myimage").attributes );
+      console.log( document.getElementById("myimage").attributes.length );
+
+      var a = document.getElementById("myimage").attributes;
+      for (var i = 0; i < a.length; i++)
+      {
+        console.log( a[i] );
+      }
+      for (var i = 0; i < a.length; i++)
+      {
+        console.log( a[i].name );
+        console.log( a[i].value );
+      }
+    </script>
+  </body>
+</html>
+
+

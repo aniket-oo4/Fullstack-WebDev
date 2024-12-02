@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: rgb(187, 155, 218);
+        }
+    </style>
+
+</head>
+<body>
+    
+<div id="div1">hello</div> 
+<input type="password" id="txt1">
+<input type="button" value="click me " id="btn1">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $("#btn1").click(sample)
+        function sample (){
+            $("div").toggle();
+            if($("#txt1")[0].type=="password"){
+                $("#txt1").attr("type","text")
+            }
+            else{
+                $("#txt1").attr("type","password")
+            }
+           
+        }
+    //  $("#div1").toggle();
+        /*
+    JQuery is the the javascript library 
+        
+jQuery provides set of predefined function to manipulate html content
+
+:
+ele.val() --gets/sets value works in form elements
+1.html() --
+     setting and getting innerHtml = get= ele.html(),set ele.html("<p>da</p>");
+
+2.text()--
+    setting and getting innerText = get= ele.text(),set ele.text("<p>da<");
+
+3.before() --
+    $("id").before("<p><p>"): it adds the new tag before the opening tag of mentioned id element
+
+4.prepend() --
+    $("id").prepend("<p><p>") : it adds the element after the opening tag of mentioned element and before the first element child 
+
+5.append()--- 
+    $("id").append("<p><p>") : it adds the element before the closing tag of mentioned element and after the last element child 
+
+6.after() --
+    $("id").after("<p><p>"): it adds the new tag after the  closing tag of mentioned id element
+
+    --functions mentined above are used to add new content and functions mentionsed beloware used to change the position of already existing element 
+
+7.insertBefore() 
+    -- $("selector for element to change its pos ").insertBefore("element for position");
+
+8.prependTo()--  
+cuts exisiting and paste it on that pos
+     $("#span1").prependTo("#div1") : span1 prepended to div1
+
+9.appendTo()--
+        $("#span1").append("#div1") : span1 removed fro current pos and pasted before closing tag of div1
+
+10.insertAfter()  --
+        $("#span1").insertAfter("#div1") : span1 removed fro current pos and pasted after closing tag of div1
+
+11.wrap():--
+        it adds the parent to the selected element  (it adds separate parent for every element which matches)
+        $("p").wrap("<div></div>")--
+            it does :<div> <p></p></div>
+            <div> <p></p></div> --so on for every p 
+
+12.wrapAll()  --
+        it adds single parent to multiple matching elements
+        $("p").wrapAll("<div> </div>")--
+            it does: <div> <p> </p><p></p></div>
+
+13.empty()   --
+        it removes the content of selected element -(it only removes content not an element <p> </p> tag are steel exist )
+        $("p").empty() :it remove all the data which is inside the paraghraph   
+
+14.remove()  --
+        it removes the element completely from the dom 
+        $("p").remove() 
+
+15.replaceWith() --
+        it replaces each and every element of selected element  with mentioned content
+        $('p').replaceWith('<div> hello<div>'):
+            all <p> dkdl</p> are replaced with <div hello</div>  
+
+
+                //----------- Manipulating attributes ------------
+                *setting attribute
+                1. ele.attr("attributeName","value");   // ths method sets single  attribute to element
+                2. ele.attr(attr:"vallue",attr2:"value",atte3:"value");// this method sets multiple attribute to the selected element 
+                * getting attribute value
+                1. ele.attr("atributeName");//it return the attriute value otherwise undefined 
+                * Removeing attribute
+                1.ele.removeAttr("attributeName");/ it remove specified attribute from element 
+
+                //------------manipulating CSS------------------------
+                1.adding class :  
+                    ele.addClass("className");
+                2.removing Class:  
+                    ele.removeClass("class name");
+                3.toggle(add/remove) class : 
+                    ele.toggleClass("class name");
+                4.checking element has specified class or not : 
+                    ele.hasClass("classname");
+                5.setting single css property :
+                    ele.css("property","value");
+                6. getting individual property value:
+                    ele.css("property");
+                7. setting multiple css properties :
+                    ele.css({"property1":"value","property2":"value","property3":"value"});
+
+----------------------------------------------------------------------------------------
+
+Event handling in JQuery 
+ Events:
+
+ 1.click() :click event 
+ 2.dblclick():dblclick event 
+ 3.mouseover():mousover event
+ 4.mouseout(): mouseout event 
+ 5.hover() :mouseover +moseout event   it takes two function as an argument  (funfor mouseover,fnformouseout);
+ 6.mousemove() :mousemove event 
+ 7.focus() :focus event 
+ 8.blur() :blur event 
+ 9.keyup() : keyup event 
+ 10.keypress(): keypress event 
+ 11.change() : change event 
+ 12.on() :[any event ]
+ 13.off() :to cancel the event 
+     jQuery element methods -- show() and hide() ele.show()itmakes style="display: inline;"|| element.hide() it makes style="display: none;"
+        
+     selector-  $(input [name="gender"])-- it selects all the input tag elements which having name ="gender "  
+     */
+    </script>
+</body>
+</html>

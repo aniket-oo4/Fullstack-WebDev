@@ -1,0 +1,68 @@
+setup 
+admin
+  -> css
+        -> //css
+        ->https://demo.bootstrapious.com/admin/css/bootstrap.css
+        ->https://demo.bootstrapious.com/admin/css/bootstrap.min.css
+        ->https://demo.bootstrapious.com/admin/css/custom.css
+        ->https://demo.bootstrapious.com/admin/css/style.default.css
+  ->img
+        ->//img
+        ->https://demo.bootstrapious.com/admin/img/avatar-1.jpg
+        ->https://demo.bootstrapious.com/admin/img/avatar-2.jpg
+        ->https://demo.bootstrapious.com/admin/img/avatar-3.jpg
+        ->https://demo.bootstrapious.com/admin/img/avatar-4.jpg
+        ->https://demo.bootstrapious.com/admin/img/avatar-5.jpg
+        ->https://demo.bootstrapious.com/admin/img/project-1.jpg
+        ->https://demo.bootstrapious.com/admin/img/project-2.jpg
+        ->https://demo.bootstrapious.com/admin/img/project-3.jpg
+        ->https://demo.bootstrapious.com/admin/img/project-4.jpg
+        ->https://demo.bootstrapious.com/admin/img/template-mac.png
+
+  ->js
+        ->//js
+        ->https://demo.bootstrapious.com/admin/js/bootstrap.min.js
+        ->https://demo.bootstrapious.com/admin/js/charts-home.js
+        ->https://demo.bootstrapious.com/admin/js/front.js 
+        ->https://demo.bootstrapious.com/admin/js/jquery.cookie.js
+        ->https://demo.bootstrapious.com/admin/js/jquery.validate.min.js
+        ->https://demo.bootstrapious.com/admin/js/tether.min.js
+  ->admin.html
+  ->tables.html
+ ->vendors
+     -> chart.js : https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js
+scss 
+    ->
+    
+
+    front.js is a custom for frontend 
+    and  style.default.css   is custom css and others are copies of that css 
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

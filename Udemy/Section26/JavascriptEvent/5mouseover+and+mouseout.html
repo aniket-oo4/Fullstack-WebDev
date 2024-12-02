@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=fypRmdswn7n8kEm37zv_c9Pt0htxCTcFt2LsV0nmkdQT9A8fdaQ1twdLulDx4_vt3uiYW4faj93EHQbI4MNuM7YLlt_0lD9lYqBkMjOs7pX7hVuR6_Ye-KiXMkV6BsIWnvuli07DirnYTkBi2pMnBPZpmnniHp_XDXBkAXsE-egD3qC_aAt6PahUsSyIimlKit08kufFbw5Hj1A7tQA-wKNwTQjIq81jF2TYn_mduLAz_9lkjq9HFFNSpKe0b3k6fs5R7hDUMwBMEfIcYzKcotFEDRtw9SkaEIAldY0Dtt_gSKZ42UAMp2HpeWKFHBvQBxkZM9S6ntdP3W14E9piFhxgRmzMz7LbrotgRwNT300jkQcN3u62DHQwU6j49TmyYGU23CpNFeidGYv4gNSjZRJHQEMxwrhA8U4SwBa2nvGTwj7gEnEemomPWckbLks98hIPWmwwb8nQx1niiPeI5nZtimi4zq2UF455h0RjHvzZBkPKTeFePc4JRoEl4mVC3j9ve05yAxqlh6bS0l3kuvmM338RTf-h4ima3A2RPGv4Yn6JbwtJxjCGsOHRr5q3h4NRuz62ZyTBx60RXJr6GSpQq4jSZrgMf3DKdx8EcXkCT-WlnbDutGiSEdsyCmxWncjeWUl2VC85AQSK9xCb7uTnBUUjwlEpd-dv48QJiO5ZrVjbZjDfpbSclXi5gm_QAEEIzPCjdkQAX0t0hNfIX7ysbV9q7XYAkWqQNO9Uuw_NAQWp8MYuJ0flKctTxUxnWS6J6CvOy4zDhdoinGxzB5w2XH2FQnSwPGjdzM6iU0E" charset="UTF-8"></script><style>
+      #div1
+      {
+        background-color: skyblue;
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>mouseover, mouseout</h4>
+    <div id="div1">div 1</div>
+    <script>
+      document.getElementById("div1").addEventListener("mouseover", sample1);
+      function sample1()
+      {
+        console.log("mouseover");
+        document.getElementById("div1").style.backgroundColor = "darkblue";
+      }
+
+      document.getElementById("div1").addEventListener("mouseout", sample2);
+      function sample2()
+      {
+        console.log("mouseout");
+        document.getElementById("div1").style.backgroundColor = "skyblue";
+      }
+    </script>
+  </body>
+</html>
+
+

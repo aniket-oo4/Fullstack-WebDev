@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>addEventListener</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=Ydt1R8lN6v1DLfthSZil4T6yeTCrIGGTA0flkH9_5W9fYV5Im_2Gzzw533kdM6S2kjGQExV3Q5z7NXB5q89KzPa59eCfahP7B96LN102VD4768B0NppgOd9yga8c2fQfpg-uCyQmtvKUbSJ3KlKSqv6N3yBBXblt4hdZS7pXAAeEN7nPlq4jJJyhjXrSsKFkoxgf1vnaR0FdOg9rkPVAB85R8dJDIyROg3BdwXz3_x1hDv7_jUNEGraTOPyJwSUZ_TybmhVD2lb1qB8obN04X15yye-Ep2iHPiBKO9ZG4zqImFURuJg1iBH1FBB-VTbimA1l-806norK93khsRwLCJJr7DW6bAfLizjqZIFxBWLyeKoauTW1E4R_5m6SfFcTyyO4PCmWlS0oGShPdUAB1CMGpBpqZDp6dcy835S_zEtYAn95WXf6Ql70eG2pES6kQbe7vUl8D9VRrHiE5QIhxt34p1kBjFH_IF_l7wdnPMOdylgopeFgTC7aY93XoI6xXQ_DU2iydv93O-r08qycJM4UxEt_nikGbzuxOGYoe_UkgtdwYuURwdilHDk7P3a3YaUxJ5ZJ17pUNDETQ7Nx8LuijbQb-bKXbglawQ-WR9S5y2I6qxZ0_LowqEqt1yv6pbBO3_c7Uk__pECu0IQMLhpdqtywnknC6Qja6R2IVvnMOa-KoIMrerney8zAI8WL-fnn0NrY8bk0F5jFQIdOgALFjMjCcnBriHidruZxLtQCwwGkkX5UezHY2EHju1_XdVSWpYAmoVTRaFD_AnXQFixez35KceeYvQtYMvHmxZg" charset="UTF-8"></script><style>
+      img
+      {
+        margin: 2px;
+        cursor: pointer;
+      }
+      .class1
+      {
+        border: 4px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>click - realtime task 2</h4>
+    <img src="book1.jpg" width="70px" >
+    <img src="book2.jpg" width="70px">
+    <img src="book3.jpg" width="70px">
+    <img src="book4.jpg" width="70px">
+    <img src="book5.jpg" width="70px">
+    <br>
+    <input type="button" value="Buy Now" id="button1">
+    <script>
+      var allBooks = [
+        { bookImage: "book1.jpg", price: 10 },
+        { bookImage: "book2.jpg", price: 7 },
+        { bookImage: "book3.jpg", price: 4 },
+        { bookImage: "book4.jpg", price: 12 },
+        { bookImage: "book5.jpg", price: 3 },
+      ];
+
+      var imageTags = document.getElementsByTagName("img");
+      for (var i = 0; i< imageTags.length; i++)
+      {
+        imageTags[i].addEventListener("click", sample);
+      }
+      function sample(event)
+      {
+        event.target.setAttribute("class", "class1");
+      }
+
+      document.getElementById("button1").addEventListener("click", sample2);
+      function sample2()
+      {
+        var totalPrice = 0;
+        var selectedBookTags = document.getElementsByClassName("class1");
+        console.log(selectedBookTags);
+        for (i = 0; i < selectedBookTags.length; i++)
+        {
+          var currentImageSrc = selectedBookTags[i].getAttribute("src");
+          for (j = 0; j < allBooks.length; j++)
+          {
+            if (currentImageSrc == allBooks[j].bookImage)
+            {
+              totalPrice = totalPrice + allBooks[j].price;
+            }
+          }
+        }
+        console.log(totalPrice);
+      }
+    </script>
+  </body>
+</html>
+
+
